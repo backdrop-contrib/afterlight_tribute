@@ -3,7 +3,6 @@ description = A mobile theme for Backdrop CMS based on Yahoo PureCSS
 version = BACKDROP_VERSION
 backdrop = 1.x
 
-stylesheets[all][] = css/pure.min.css
 stylesheets[all][] = css/style.css
 stylesheets[all][] = css/colors.css
 stylesheets[print][] = css/print.css
