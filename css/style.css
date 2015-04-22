@@ -803,7 +803,7 @@ td, th {
 
 /*
  * Typography
- * 
+ *
  * Text styles, not colours go in this file
  * these defaults come from the Bartik theme
  * Big thanks to Jen Simmons for these defaults https://www.drupal.org/u/jensimmons
@@ -957,7 +957,7 @@ a.feed-icon {
 /* ---------- Import design ---------- */
 /*
  * Design
- * 
+ *
  * Include all your design elements in this file.
  * forms/buttons and non-general html elements/footer/header
  * these defaults come from the Bartik theme
@@ -2185,7 +2185,7 @@ div.block-system-main-menu ul li {
 /* ---------- Import styles ---------- */
 /*
  * Design
- * 
+ *
  * Colours go in this file
  * these defaults come from the Bartik theme
  * Big thanks to Jen Simmons for these defaults https://www.drupal.org/u/jensimmons
@@ -2432,9 +2432,6 @@ li.node-readmore a {
 
 footer.link-wrapper ul.links li {
   background-color: #fff; }
-
-li:hover {
-  border-bottom: 1px solid #9daca9; }
 
 #main-menu li a.active {
   border-bottom: 1px solid #9daca9; }

@@ -1,6 +1,6 @@
 /*
  * Design
- * 
+ *
  * Colours go in this file
  * these defaults come from the Bartik theme
  * Big thanks to Jen Simmons for these defaults https://www.drupal.org/u/jensimmons
@@ -108,7 +108,7 @@ color: #686868;
 }
 
 header.l-header, .l-header ul.menu li a.active, .l-header ul.menu li.active-trail a {
-  
+
 }
 
 .view-mode-teaser h2 a {
@@ -399,4 +399,19 @@ fieldset {
 div.admin-panel {
   background: #fbfbfb;
   border: 1px solid #ccc;
+}
+
+li:hover
+{
+border: 0px solid;
+}
+
+.js fieldset.collapsed
+{
+height: 2.1em;
+}
+
+table tr th
+{
+background: #eee;
 }

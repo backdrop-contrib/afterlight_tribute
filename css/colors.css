@@ -402,10 +402,6 @@ footer.link-wrapper ul.links li
 background-color: #fff;
 }
 
-li:hover {
-  border-bottom: 1px solid #9daca9;
-}
-
 #main-menu li a.active
 {
   border-bottom: 1px solid #9daca9;
