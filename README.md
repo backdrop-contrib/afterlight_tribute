@@ -51,6 +51,8 @@ If it bothers you that we don't use the Libraries module, file an issue and we c
 
 When official information on using third-party frameworks becomes known, this will follow it.
 
+The first big change we will make to this theme when we have time is to run this theme through an "un-css" cleaner and chop out some css (even core) to make this download faster.  A major goal of this theme is to download fast.
+
 SPECIAL THANKS
 --------------
 
