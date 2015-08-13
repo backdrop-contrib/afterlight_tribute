@@ -1,0 +1,418 @@
+/*
+ * Colours
+ *
+ * Colours go in this file
+ * these defaults come from the Bartik theme and are being transitioned from CSS into SASS variables
+ * Big thanks to Jen Simmons for these defaults https://www.drupal.org/u/jensimmons
+ */
+@charset "UTF-8";
+
+html {
+    ::selection,
+    ::-moz-selection {
+        color: $base-selected-text-color;
+        background: $base-selected-text-background-color;
+    }
+}
+
+a {
+    color: $base-link-color;
+}
+
+a:hover, a:active {
+    color: $base-link-hover-color;
+}
+
+.l-container, .l-header ul.menu li a.active, .l-header ul.menu li.active-trail a {
+    background: inherit;
+}
+
+.comment .comment-arrow {
+    border-color: $white;
+}
+
+tr.odd, code, kbd, pre, blockquote {
+    background-color: #f2f2f2;
+}
+
+kbd {
+    color: #666;
+}
+
+blockquote:before, blockquote:after {
+    color: $lightgrey;
+}
+
+table tr th {
+    background: #757575;
+    background: rgba(0, 0, 0, 0.51);
+    border-bottom-style: none;
+}
+
+#skip-link a:visited {
+    background: $darkgrey;
+    background: rgba(0, 0, 0, 0.6);
+    color: $white;
+}
+
+.tabs ul.primary li.active a,
+.js .dropbutton-widget,
+.js .dropbutton-multiple.open .dropbutton-widget:hover,
+.custom-menu-toggle .bar,
+li.node-readmore a,
+footer.link-wrapper ul.links li,
+.l-header #mobile-menu li.active-trail a,
+.l-header .form-text {
+    background-color: $white;
+}
+
+.l-header .form-text {
+    border-color: $lightgrey;
+    border-color: rgba(255, 255, 255, 0.3);
+    color: $realblack;
+}
+
+.l-header .form-text:hover,
+.l-header .form-text:focus,
+.l-header .form-text:active {
+    background: $white;
+    color: $realblack;
+}
+
+.l-header .form-required {
+    color: $white;
+    color: $black;
+}
+
+.unpublished .comment-text .comment-arrow {
+    border-left: 1px solid #fff4f4;
+    border-right: 1px solid #fff4f4;
+}
+
+.l-header .block-user-login input.form-submit {
+    border-color: $lightgrey;
+    border-color: rgba(255, 255, 255, 0.5);
+    background: $white;
+    color: $black;
+}
+
+.l-header .block-user-login input.form-submit:hover,
+.l-header .block-user-login input.form-submit:focus {
+    background: $white;
+    color: $black;
+}
+
+header.l-header, .l-header ul.menu li a.active, .l-header ul.menu li.active-trail a, .header-menu a {
+    background: $black;
+    color: $white;
+}
+
+.gn-menu-main {
+    background: transparent !important;
+}
+
+.gn-trigger {
+    background: $white !important;
+}
+
+.view-mode-teaser h2 a {
+    color: #181818;
+}
+
+article .link-wrapper ul.links {
+    color: #68696b;
+}
+
+.comment .submitted .comment-time {
+    color: #68696b;
+}
+
+.l-triptych-wrapper {
+    background-color: #f0f0f0;
+    background: rgba(30, 50, 10, 0.08);
+}
+
+.l-triptych h2 {
+    color: $black;
+}
+
+.l-footer-columns,
+.l-footer {
+    color: #c0c0c0;
+    color: rgba(255, 255, 255, 0.65);
+    background-color: $black;
+}
+
+.l-footer-columns a,
+.l-footer a {
+    color: #fcfcfc;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.l-footer-columns a:hover,
+.l-footer-columns a:focus,
+.l-footer a:hover,
+.l-footer a:focus {
+    color: $white;
+}
+
+.l-footer-columns li a:hover,
+.l-footer-columns li a:focus,
+.l-footer li a:hover,
+.l-footer li a:focus {
+    background-color: #1f1f21;
+    background-color: rgba(255, 255, 255, 0.05);
+}
+
+.l-footer-columns li a.active {
+    color: $white;
+}
+
+.l-footer-columns h2,
+.l-footer h2 {
+    border-bottom: 1px solid $darkgrey;
+    border-color: rgba(255, 255, 255, 0.15);
+}
+
+.l-footer-columns li a,
+.l-footer li a {
+    border-bottom: 1px solid $darkgrey;
+    border-color: rgba(255, 255, 255, 0.15);
+}
+
+.l-footer .section {
+    border-top: 1px solid $darkgrey;
+    border-color: rgba(255, 255, 255, 0.15);
+}
+
+.l-footer .menu li a {
+    border-right: 1px solid $darkgrey;
+    /* LTR */
+    border-color: rgba(255, 255, 255, 0.15);
+}
+
+[dir="rtl"] .l-footer .menu li a {
+    border-left: 1px solid $darkgrey;
+    border-right: none;
+}
+
+.l-footer-wrapper tr.odd {
+    background-color: transparent;
+}
+
+.l-footer-wrapper tr.even {
+    background-color: $lightgrey;
+    background-color: rgba(0, 0, 0, 0.15);
+}
+
+.tabs ul.primary li.active a {
+    border-bottom: 1px solid $white;
+}
+
+.tabs ul.primary li a {
+    color: $black;
+    background-color: #ededed;
+}
+
+fieldset legend {
+    background: #dbdbdb;
+    border: 1px solid $lightgrey;
+    color: #3b3b3b;
+}
+
+fieldset legend a {
+    color: #3b3b3b;
+}
+
+fieldset legend a:hover,
+fieldset legend a:focus,
+fieldset legend a:active {
+    color: $black;
+}
+
+fieldset .fieldset-description {
+    color: #3c3c3c;
+}
+
+input.form-text,
+input.form-tel,
+input.form-email,
+input.form-url,
+input.form-color,
+input.form-number,
+input.form-search,
+textarea.form-textarea,
+select.form-select {
+    border: 1px solid $lightgrey;
+}
+
+/* Disabled form elements */
+input.form-button-disabled,
+input.form-button-disabled:hover,
+input.form-button-disabled:focus,
+input.form-button-disabled:active,
+.form-disabled input,
+.form-disabled select,
+.form-disabled textarea {
+    background: #ededed;
+    border-color: #bbb;
+    color: #717171;
+}
+
+.form-disabled .grippie {
+    background-color: #ededed;
+    border-color: $lightgrey;
+}
+
+.form-disabled label {
+    color: #717171;
+}
+
+#search-block-form input.form-submit,
+#search-form input.form-submit {
+    border-color: #e4e4e4 #d2d2d2 #b4b4b4;
+}
+
+.js .dropbutton-widget:hover {
+    background-color: #f8f8f8;
+    border-color: #b8b8b8;
+}
+
+.button-success,
+.button-error,
+.button-warning,
+.button-secondary,
+.button-error,
+.danger,
+#edit-cancel,
+.button-secondary,
+.button,
+.basic-cart-add-to-cart-link,
+input[type=button],
+input[type=reset],
+input[type=submit] {
+    color: $white;
+}
+
+.button,
+.basic-cart-add-to-cart-link,
+input[type=button],
+input[type=submit],
+.button-success {
+    background: $base-link-color;
+}
+
+.button-error, .danger {
+    background: rgb(202, 60, 60);
+    /* this is a maroon */
+    color: $white;
+}
+
+.button-warning, #edit-cancel, input[type=reset] {
+    background: $base-link-hover-color;
+}
+
+.button-secondary {
+    background: rgb(66, 184, 221);
+    /* this is a light blue */
+}
+
+.danger:hover,
+#edit-cancel:hover,
+.danger:focus,
+#edit-cancel:focus,
+a.button:hover,
+a.button:focus,
+input[type=button]:hover,
+input[type=reset]:hover,
+input[type=submit]:hover
+input[type=button]:focus,
+input[type=reset]:focus,
+input[type=submit]:focus {
+    background: $lightgrey;
+    color: $white;
+    text-decoration: none;
+}
+
+.l-header ul.menu li a {
+    color: $white;
+}
+
+.custom-menu-wrapper {
+    background-color: $black;
+}
+
+.custom-menu .pure-menu-link,
+.custom-menu .pure-menu-heading {
+    color: $white;
+}
+
+.custom-menu .pure-menu-link:hover,
+.custom-menu .pure-menu-heading:hover {
+    background-color: transparent;
+}
+
+.custom-menu-screen {
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.custom-menu-bottom {
+    border-top: 1px solid $lightgrey;
+    background-color: $lightgrey \9;
+}
+
+#main-menu li a.active {
+    border-bottom: 1px solid #9daca9;
+}
+
+.block-system-main-menu ul.menu li {
+    background: $black !important;
+}
+
+tr.odd {
+    background: #e4e4e4;
+    background: rgba(0, 0, 0, 0.105);
+}
+
+tr,
+tr.even {
+    background: #efefef;
+    background: rgba(0, 0, 0, 0.063);
+}
+
+.view-mode-teaser.sticky {
+    background: #f9f9f9;
+    background: rgba(0, 0, 0, 0.024);
+    border: 1px solid #d3d7d9;
+}
+
+.l-sidebar tr.even,
+.l-sidebar tr.odd {
+    background: none;
+    border-bottom: 1px solid #d6d6d6;
+}
+
+.tabs ul.secondary li a.active {
+    background: #f2f2f2;
+}
+
+fieldset {
+    background: $white;
+    border: 1px solid $lightgrey;
+}
+
+div.admin-panel {
+    background: #fbfbfb;
+    border: 1px solid $lightgrey;
+}
+
+table tr th {
+    background: $lightgrey;
+}
+
+@media only screen and (max-width: 768px) {
+    .block-system-main-menu .mobile-menu-accordion li.expanded li,
+    .block-system-main-menu .mobile-menu-basic li.expanded li {
+        background: $lightgrey !important;
+    }
+}

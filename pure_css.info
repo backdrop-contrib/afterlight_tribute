@@ -1,14 +1,14 @@
 name = PureCSS
 description = A mobile theme for Backdrop CMS based on Yahoo PureCSS
-version = BACKDROP_VERSION
 backdrop = 1.x
 type = theme
+version = 1.x-1.1
 
-stylesheets[all][] = css/style.css
-stylesheets[all][] = css/colors.css
-stylesheets[print][] = css/print.css
+; stylesheets[all][] = css/style.css
+; stylesheets[all][] = css/colors.css
+; stylesheets[print][] = css/print.css
 
-scripts[] = js/scripts.js
+; scripts[] = js/scripts.js
 breakpoints[all] = (min-width: 0em)
 breakpoints[small] = (min-width: 35em)
 breakpoints[large] = (min-width: 55em)

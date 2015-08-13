@@ -1,5 +1,19 @@
 PURE CSS
-===========
+--------
+
+Pure CSS is a basic, black and white, simple blank canvas theme using:
+
+- integration with Pure CSS by Yahoo! for more mobile friendly page elements
+- default Backdrop layouts
+- some Bartik default CSS
+- a single CSS file OR
+- SASS stylesheets using libSASS and Grunt for workflow
+- integration with either the Mobile Navigation module or Responsive Menus module for dropdown or mobile-friendly main menu.  Sliders, custom fonts and other theme features do not come with this and you are encouraged to incorporate separate modules for each page feature that you wish.
+
+A news site is a good example of how to use this theme.
+A children's charity website is probably not a good fit for this theme.
+
+"This theme differentiates itself by its simplicity and structure. It does not incorporate a great list of features but rather embodies a frontend workflow. Many of the existing themes are bloated with features and overwrites. We do not want to rewrite output, just makes it easier to develop a theme in a structured way." - quote from the original developers.
 
 CONTENTS OF THIS FILE
 ---------------------
@@ -19,31 +33,16 @@ CONTENTS OF THIS FILE
  - License
  - Maintainers
 
-INTRODUCTION
-------------
-
-Pure CSS is a basic, blank canvas theme using:
-
-- default Backdrop layouts
-- some Bartik default CSS
-- the Color module UI for changing theme colors
-- Pure CSS by Yahoo! for more mobile friendly page elements
-- a single CSS file OR
-- SASS stylesheets using libSASS and Grunt for workflow
-- integration with the Mobile Navigation Menu module for a mobile-friendly menu
-
-"This theme differentiates itself by its simplicity and structure. It does not incorporate a great list of features but rather embodies a frontend workflow. Many of the existing themes are bloated with features and overwrites. We do not want to rewrite output, just makes it easier to develop a theme in a structured way."
-
 TESTED
 -----
 
 @todo
-This theme has been manually tested successfully creating and viewing nodes and style guide in Backdrop.
+This theme has been manually tested successfully creating and viewing nodes and style guide in Backdrop with the Mobile Navigation, Webform and Responsive Menus modules.
 
 KNOWN ISSUES
 ---------------------
 
-NOTE -- this theme is in a heavy development state.  If you have spare time and shared ideas on how to propel it forward coding cleanly and under the appropriate licenses, you are welcome to join in and offer advice or build it together.
+NOTE -- this theme is somewhat stable but being developed state.  If you have spare time and shared ideas on how to propel it forward coding cleanly and under the appropriate licenses, you are welcome to join in and offer advice or build it together.
 
 This theme works as is by just installing it.
 
@@ -51,7 +50,7 @@ If it bothers you that we don't use the Libraries module, file an issue and we c
 
 When official information on using third-party frameworks becomes known, this will follow it.
 
-The first big change we will make to this theme when we have time is to run this theme through an "un-css" cleaner and chop out some css (even core) to make this download faster.  A major goal of this theme is to download fast.
+The first big change we will make to this theme when we have time is to run this theme through an "un-css" cleaner and chop out some css (even core) to make this download faster.  A major goal of this theme is to download your pages fast to the end user.
 
 SPECIAL THANKS
 --------------
@@ -61,8 +60,9 @@ Special thanks to <https://www.drupal.org/u/frankbaele> for this great work!
 
 This theme uses the PureCSS CSS toolkit from Yahoo!
 Special thanks to the developers at Yahoo! for this great work!
+This theme is not affiliated with Yahoo! or the PureCSS developers in any way.
 
-You may extend this theme with the documentation/classes from http://purecss.io/
+You may extend this theme with the documentation/classes from http://purecss.io
 
 "Pure plays well with other libraries, including Bootstrap and jQuery. As a developer, you can pull in Pure as a foundational CSS framework, and then include specific Bootstrap or jQuery modules that your application may require."
 
@@ -93,7 +93,7 @@ CASUAL USAGE
 ------------------
 
 If you would like to use CSS instead of SASS, edit the css/style.css file to alter the appearence of your website.
-Place your CSS at the bottom of the file.
+Place your custom CSS at the bottom of the file.
 
 If you would like to add custom Javascript to your site, edit the js/scripts.js file.
 
@@ -117,35 +117,9 @@ Overall file structure
 
 SASS file structure
 
-Here is the default layout of SASS partial files in this theme.
-STYLES folder
-_styles.scss
--- style.scss contains the settings for your SASS theme and should not contain SASS/CSS
-
-BASE folder
-_normalize.scss
--- this file contains the base CSS for your site.  You probably shouldn't alter this file.
-
-_extendables.scss
-_functions.scss
-_mixins.scss
--- these files contain the functions to transform your SASS.
-
-_variables.scss
--- this file contains the variables to place into your theme.  For example, define $link-color here as #0000ff rather than write #0000ff in your files.
-_typography.scss
--- this file contains the SASS that defines your base fonts, text elements, and so forth.
-
-DESIGN folder
-_design.scss
--- form elements, buttons, etc
-
-_layout.scss
--- tables, blocks, layout design, etc
-
-_navigation.scss
--- the header, footer, and menus
-
+We are in the process of converting from random code from different places into follwowing:
+<http://www.sitepoint.com/architecture-sass-project/>
+<http://sass-guidelin.es/>
 
 USAGE
 -----
@@ -178,21 +152,21 @@ to install the SASS tools for this theme.
 After this has installed, use these commands on the command line in the root of your theme to make the theme do its thing:
 
 Grunt tasks
-===========
+---------------------
 - grunt sass
 
 compile the sass files
 
 - grunt watch
 
-start a watch and livereload session for the xtheme
+start watching for changes you make to your files and on save automatically reload the page in your localhost.
 
 - grunt prod
 
 compile the theme for production
 
 Compass compile
-===========
+---------------------
 
 You can also compile this theme with compass or ruby just install the following gems
 
@@ -211,8 +185,7 @@ Let us know and the maintainer will happy to work with you or field your request
 License
 -------
 
-This project is GPL v2 software. See the LICENSE.txt file in this directory for
-complete text.
+This project is GPL v2 software. See the LICENSE.txt file in this directory for complete text.
 
 Maintainers
 -----------

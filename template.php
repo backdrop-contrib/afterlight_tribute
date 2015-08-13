@@ -110,3 +110,43 @@ $sub_menu = backdrop_render($element['#below']);
 $output = l($element['#title'], $element['#href'], $element['#localized_options']);
 return '<li' . backdrop_attributes($element['#attributes']) . '>' . $output . $sub_menu . "</li>\n";
 }
+
+
+function pure_css_breadcrumb($variables) {
+
+if (theme_get_setting('pure_css_cdn') > 0)
+{
+backdrop_add_css('http://cdnjs.cloudflare.com/ajax/libs/pure/0.6.0/pure-min.css', array('type' => 'external', 'every_page' => TRUE, 'preprocess' => TRUE));
+backdrop_add_css('themes/pure_css/css/style.css', array('every_page' => TRUE, 'preprocess' => TRUE));
+
+if (theme_get_setting('pure_css_script1') > 0)
+{
+backdrop_add_js("https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js", array('type' => 'external', 'scope' => 'footer', 'every_page' => TRUE, 'preprocess' => TRUE));
+}
+
+if (theme_get_setting('pure_css_script2') > 0)
+{
+backdrop_add_js("https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.14.0/jquery.validate.min.js", array('type' => 'external', 'scope' => 'footer', 'every_page' => TRUE, 'preprocess' => TRUE));
+}
+
+if (theme_get_setting('pure_css_script3') > 0)
+{
+backdrop_add_js("https://cdnjs.cloudflare.com/ajax/libs/fastclick/1.0.6/fastclick.min.js", array('type' => 'external', 'scope' => 'footer', 'every_page' => TRUE, 'preprocess' => TRUE));
+}
+
+if (theme_get_setting('pure_css_script4') > 0)
+{
+backdrop_add_js("https://cdnjs.cloudflare.com/ajax/libs/hammer.js/2.0.4/hammer.min.js", array('type' => 'external', 'scope' => 'footer', 'every_page' => TRUE, 'preprocess' => TRUE));
+}
+
+}
+else
+{
+backdrop_add_css('themes/pure_css/css/pure.min.css', array('type' => 'file', 'every_page' => TRUE, 'preprocess' => TRUE));
+backdrop_add_css('themes/pure_css/css/style.css', array('type' => 'file', 'every_page' => TRUE, 'preprocess' => TRUE));
+}
+
+backdrop_add_js("themes/pure_css/js/scripts.js", array('type' => 'file', 'scope' => 'footer', 'every_page' => TRUE, 'preprocess' => TRUE));
+backdrop_add_js("document.write('<script src=\"http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1\"></' + 'script>')", array('type' => 'inline', 'scope' => 'footer', 'weight' => 9999));
+
+}

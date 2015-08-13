@@ -1,0 +1,461 @@
+/*
+ * Components
+ *
+ * Include all your design elements in this file.
+ * forms/buttons and non-general html elements
+ * these defaults come from the Bartik theme and are being transitioned from CSS into SASS variables
+ * Big thanks to Jen Simmons for these defaults https://www.drupal.org/u/jensimmons
+ */
+@charset "UTF-8";
+
+/* Base responsive images */
+img {
+    height: auto;
+    max-width: 100%;
+    outline: 0;
+}
+
+a.logo img {
+    height: auto;
+    max-width: 125px;
+    max-height: 100px;
+}
+
+/* ---------------- Buttons    ---------------- */
+
+[dir="rtl"] input.form-submit,
+[dir="rtl"] a.button {
+    margin-right: 0;
+    margin-left: 0.6em;
+}
+
+/* ---------- Dropbutton ----------- */
+.js .dropbutton-widget {
+    border-radius: 5px;
+}
+
+.button-success,
+.button-error,
+.button-warning,
+.button-secondary,
+.button-error,
+.danger,
+#edit-cancel,
+.button-secondary,
+.button,
+.basic-cart-add-to-cart-link,
+input[type=button],
+input[type=reset],
+input[type=submit] {
+    border-radius: 4px;
+    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+    padding: .5em 1em;
+}
+
+.pure-button {
+    margin-right: 0.6em;
+}
+
+a.button {
+    line-height: 2;
+}
+
+@media screen and (max-width: 768px) {
+    .button-success,
+    .button-error,
+    .button-warning,
+    .button-secondary,
+    .button-error,
+    .danger,
+    #edit-cancel,
+    .button-secondary,
+    .basic-cart-add-to-cart-link,
+    input[type=button],
+    input[type=reset],
+    input[type=submit] {
+        height: 50px;
+        width: auto;
+    }
+    .danger, #edit-cancel {
+        display: inline-block;
+        height: 35px;
+        width: 70px;
+        padding-top: 14px;
+        padding-bottom: 0px;
+        text-align: center;
+        line-height: normal;
+    }
+}
+
+/* -------------- Form Elements   ------------- */
+
+fieldset {
+    margin-top: 10px;
+    margin-bottom: 32px;
+    padding: 0 0 10px;
+    position: relative;
+    top: 12px;
+    /* Offsets the negative margin of legends */
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+}
+
+.fieldset-wrapper {
+    margin-top: 25px;
+}
+
+.node-form .vertical-tabs .fieldset-wrapper {
+    margin-top: 0;
+}
+
+.filter-wrapper {
+    top: 0;
+    padding: 1em 0 0.2em;
+    -moz-border-radius-topright: 0;
+    -moz-border-radius-topleft: 0;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+}
+
+.filter-help a {
+    font-size: 0.857em;
+    padding: 2px 20px 0;
+}
+
+.filter-wrapper .form-item label {
+    margin-right: 10px;
+}
+
+.filter-wrapper .form-item {
+    padding: 0 0 0.5em 0.5em;
+}
+
+.filter-guidelines {
+    padding: 0 1.5em 0 0.5em;
+}
+
+fieldset.collapsed {
+    background: transparent;
+    -moz-border-radius: 0;
+    border-radius: 0;
+}
+
+fieldset legend {
+    border-bottom: none;
+    display: block;
+    height: 2em;
+    left: -1px;
+    /* LTR */
+    font-family: "Lucida Grande", "Lucida Sans Unicode", Verdana, sans-serif;
+    line-height: 2;
+    padding: 0;
+    position: absolute;
+    text-indent: 10px;
+    text-shadow: 0 1px 0 $white;
+    top: -12px;
+    width: 100%;
+    -moz-border-radius-topleft: 4px;
+    border-top-left-radius: 4px;
+    -moz-border-radius-topright: 4px;
+    border-top-right-radius: 4px;
+}
+
+fieldset.collapsed legend {
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+}
+
+fieldset .fieldset-wrapper {
+    padding: 0 10px;
+}
+
+fieldset .fieldset-description {
+    margin-top: 5px;
+    margin-bottom: 1em;
+    line-height: 1.4;
+    font-style: italic;
+}
+
+.js fieldset.collapsed {
+    height: 2.1em;
+}
+
+input {
+    margin: 2px 0;
+    padding: 4px;
+}
+
+input,
+textarea {
+    font-size: 0.929em;
+}
+
+textarea {
+    line-height: 1.5;
+}
+
+textarea.form-textarea,
+select.form-select {
+    padding: 4px;
+}
+
+input.form-text,
+input.form-tel,
+input.form-email,
+input.form-url,
+input.form-color,
+input.form-number,
+input.form-search,
+textarea.form-textarea,
+select.form-select {
+    box-sizing: border-box;
+    max-width: 100%;
+}
+
+input.form-search {
+    color: $black;
+}
+
+.form-item {
+    margin-bottom: 1em;
+    margin-top: 2px;
+}
+
+.form-item label {
+    font-size: 0.929em;
+}
+
+.form-type-radio label,
+.form-type-checkbox label {
+    margin-left: 4px;
+}
+
+.form-type-radio .description,
+.form-type-checkbox .description {
+    margin-left: 2px;
+}
+
+.form-actions {
+    padding-top: 10px;
+}
+
+/* Contact Form */
+.contact-form #edit-name {
+    width: 75%;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+}
+
+.contact-form #edit-mail {
+    width: 75%;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+}
+
+.contact-form #edit-subject {
+    width: 75%;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+}
+
+.contact-form #edit-message {
+    width: 76.3%;
+    -moz-border-radius-topleft: 4px;
+    -moz-border-radius-topright: 4px;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+}
+
+.contact-form .resizable-textarea .grippie {
+    width: 76%;
+    -moz-border-radius-bottomleft: 4px;
+    -moz-border-radius-bottomright: 4px;
+    border-bottom-left-radius: 4px;
+    border-bottom-right-radius: 4px;
+}
+
+/* Comment form */
+.comment-form label {
+    float: left;
+    /* LTR */
+    font-size: 0.929em;
+    width: 120px;
+}
+
+[dir="rtl"] .comment-form label {
+    float: right;
+}
+
+.comment-form input,
+.comment-form .form-select {
+    margin: 0;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+}
+
+.comment-form .form-type-textarea label {
+    float: none;
+}
+
+.comment-form .form-item,
+.comment-form .form-radios,
+.comment-form .form-type-checkbox,
+.comment-form .form-select {
+    margin-bottom: 10px;
+    overflow: hidden;
+}
+
+.comment-form .form-type-checkbox,
+.comment-form .form-radios {
+    margin-left: 120px;
+    /* LTR */
+}
+
+[dir="rtl"] .comment-form .form-type-checkbox,
+[dir="rtl"] .comment-form .form-radios {
+    margin-left: 0;
+    margin-right: 120px;
+}
+
+.comment-form .form-type-checkbox label,
+.comment-form .form-radios label {
+    float: none;
+    margin-top: 0;
+}
+
+.comment-form input.form-file {
+    width: auto;
+}
+
+.no-sidebars .comment-form .form-text {
+    width: 800px;
+}
+
+.one-sidebar .comment-form .form-text {
+    width: 500px;
+}
+
+.two-sidebars .comment-form .form-text {
+    width: 320px;
+}
+
+.comment-form .form-item .description {
+    font-size: 0.786em;
+    line-height: 1.2;
+    margin-left: 120px;
+    /* LTR */
+}
+
+[dir="rtl"] .comment-form .form-item .description {
+    margin-left: 0;
+    margin-right: 120px;
+}
+
+h2.comment-form {
+    margin-bottom: 0.5em;
+}
+
+.comment-form .form-textarea {
+    -moz-border-radius-topleft: 4px;
+    -moz-border-radius-topright: 4px;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+}
+
+.comment-form fieldset.filter-wrapper .fieldset-wrapper,
+.comment-form .text-format-wrapper .form-item {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.filter-wrapper label {
+    width: auto;
+    float: none;
+}
+
+.filter-wrapper .form-select {
+    min-width: 120px;
+}
+
+.comment-form fieldset.filter-wrapper .tips {
+    font-size: 0.786em;
+}
+
+#comment-body-add-more-wrapper .form-type-textarea label {
+    margin-bottom: 0.4em;
+}
+
+#edit-actions input {
+    margin-right: 0.6em;
+    /* LTR */
+}
+
+[dir="rtl"] #edit-actions input {
+    margin-left: 0.6em;
+    margin-right: 0;
+}
+
+/* --------------- Search Form ---------------- */
+
+.block-search-form {
+    padding-bottom: 7px;
+}
+
+.block-search-form .content {
+    margin-top: 0;
+}
+
+.block-search-form .form-actions {
+    padding: 0;
+}
+
+#search-form input#edit-keys,
+.block-search-form .form-item-search-block-form input {
+    float: left;
+    /* LTR */
+    font-size: 1em;
+    width: 9em;
+    margin-right: 5px;
+    /* LTR */
+    padding: 0.6em;
+}
+
+[dir="rtl"] #search-form input#edit-keys,
+[dir="rtl"] .block-search-form .form-item-search-block-form input {
+    float: right;
+    margin-left: 5px;
+    margin-right: 0;
+}
+
+#search-block-form input.form-submit,
+#search-form input.form-submit {
+    margin-left: 0;
+    margin-right: 0;
+    height: 39px;
+    width: 45px;
+    padding: 0;
+    cursor: pointer;
+    text-indent: -9999px;
+    background: url(../images/search-button.png) no-repeat;
+    background-size: cover;
+    overflow: hidden;
+}
+
+#search-block-form input.form-submit:hover,
+#search-block-form input.form-submit:focus,
+#search-form input.form-submit:hover,
+#search-form input.form-submit:focus {
+    background-position: center bottom;
+}
+
+#search-form .form-item-keys label {
+    display: block;
+}
+
+body .l-header ul.menu li a:hover {
+    text-decoration: underline;
+}
+
+li:hover {
+    border: 0px solid;
+}

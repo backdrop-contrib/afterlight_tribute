@@ -1,13 +1,16 @@
 $legacy_support_for_ie: false;
 $normalize_headings: true;
 /* Colors */
-$background: #fff;
-$color: #000;
-$base-text-color: $color;
+$white: #fefefe;
+$black: #252525;
+$realblack: #000;
+$lightgrey: #ccc;
+$darkgrey: #555;
+$base-text-color: $black;
 $base-selected-text-color: invert($base-text-color);
 $base-selected-text-background-color: $base-text-color;
-$base-link-color: #58b8d1;
-$base-link-hover-color: #DF006E;
+$base-link-color: rgb(28, 184, 65);
+$base-link-hover-color: rgb(223, 117, 20);
 
 /* Font stuff */
 
