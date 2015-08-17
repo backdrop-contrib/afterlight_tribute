@@ -1,21 +1,21 @@
 /*
  * Typography
- * 
+ *
  * Text styles, not colours go in this file
  * these defaults come from the Bartik theme
  * Big thanks to Jen Simmons for these defaults https://www.drupal.org/u/jensimmons
  */
-
 
 // 1. Corrects text resizing oddly in IE6/7 when body font-size is set using em units
 //    http://clagnut.com/blog/348/#c790
 // 2. Prevents iOS text size adjust after orientation change, without disabling user zoom
 //    www.456bereastreet.com/archive/201012/controlling_text_size_in_safari_for_ios_without_disabling_user_zoom/
 html {
-  font-size: 100% * ($base-font-size / 16px); /* 1 */
-  -webkit-text-size-adjust: 100%; /* 2 */
-  -ms-text-size-adjust: 100%; /* 2 */
-  -webkit-font-smoothing: antialiased;
+    -webkit-text-size-adjust: 100%;
+    /* 2 */
+    -ms-text-size-adjust: 100%;
+    /* 2 */
+    -webkit-font-smoothing: antialiased;
 }
 
 // Addresses font-family inconsistency between 'textarea' and other form elements.
@@ -24,78 +24,70 @@ button,
 input,
 select,
 textarea {
-  font-family: $base-font-family;
+    font-family: $base-font-family;
 }
 
-
-/* Line-heights */
-body{
-  font-size: $base-font-size;
-  line-height: $base-line-height;
+body {
+    font-family: $base-font-family;
+    font-size: $base-font-size;
+    line-height: $base-line-height;
+    color: $base-text-color;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+    margin: 0;
 }
 
 h1 {
-  margin: $h1_margin;
-  padding: $h1_padding;
-  font-size: $h1_font_size;
+    margin: $h1_margin;
+    padding: $h1_padding;
+    font-size: $h1_font_size;
+    margin-top: 0px;
 }
 
 h2 {
-  margin: $h2_margin;
-  padding: $h2_padding;
-  font-size: $h2_font_size;
+    margin: $h2_margin;
+    padding: $h2_padding;
+    font-size: $h2_font_size;
+    margin-top: 0px;
 }
 
 h3 {
-  margin: $h3_margin;
-  padding: $h3_padding;
-  font-size: $h3_font_size;
+    margin: $h3_margin;
+    padding: $h3_padding;
+    font-size: $h3_font_size;
+    margin-top: 0px;
 }
 
 h4 {
-  margin: $h4_margin;
-  padding: $h4_padding;
-  font-size: $h4_font_size;
+    margin: $h4_margin;
+    padding: $h4_padding;
+    font-size: $h4_font_size;
+    margin-top: 0px;
 }
 
 h5 {
-  margin: $h5_margin;
-  padding: $h5_padding;
-  font-size: $h5_font_size;
+    margin: $h5_margin;
+    padding: $h5_padding;
+    font-size: $h5_font_size;
+    margin-top: 0px;
 }
 
 h6 {
-  margin: $h6_margin;
-  padding: $h6_padding;
-  font-size: $h6_font_size;
+    margin: $h6_margin;
+    padding: $h6_padding;
+    font-size: $h6_font_size;
+    margin-top: 0px;
 }
-
-
 
 /* ---------- Overall Specifications ---------- */
-
-body {
-  word-wrap: break-word;
-  margin: 0;
-  padding: 0;
-  border: 0;
-  outline: 0;
-}
-a:link,
-a:visited {
-  text-decoration: none;
-}
-a:hover,
-a:active,
-a:focus {
-  text-decoration: underline;
-}
-
 p {
-  margin: 0 0 1.2em;
+    margin: 0 0 1.2em;
 }
+
 del {
-  text-decoration: line-through;
+    text-decoration: line-through;
 }
 
 code,
@@ -103,9 +95,9 @@ pre,
 kbd,
 samp,
 var {
-  padding: 0 0.4em;
-  font-size: 0.857em;
-  font-family: Menlo, Consolas, "Andale Mono", "Lucida Console", "Nimbus Mono L", "DejaVu Sans Mono", monospace, "Courier New";
+    padding: 0 0.4em;
+    font-size: 0.857em;
+    font-family: Menlo, Consolas, "Andale Mono", "Lucida Console", "Nimbus Mono L", "DejaVu Sans Mono", monospace, "Courier New";
 }
 
 pre code,
@@ -115,75 +107,91 @@ pre var,
 kbd kbd,
 kbd samp,
 code var {
-  font-size: 100%;
-  background-color: transparent;
+    font-size: 100%;
+    background-color: transparent;
 }
+
 pre code,
 pre samp,
 pre var {
-  padding: 0;
-}
-.description code {
-  font-size: 1em;
-}
-kbd {
-  border: 1px outset #575757;
-  margin: 0 3px;
-  display: inline-block;
-  padding: 0 6px;
-  -moz-border-radius: 5px;
-  border-radius: 5px;
-}
-pre {
-  margin: 10px 0;
-  overflow: hidden;
-  padding: 15px;
-  white-space: pre-wrap;
+    padding: 0;
 }
 
+.description code {
+    font-size: 1em;
+}
+
+kbd {
+    border: 1px outset #575757;
+    margin: 0 3px;
+    display: inline-block;
+    padding: 0 6px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+}
+
+pre {
+    margin: 10px 0;
+    overflow: hidden;
+    padding: 15px;
+    white-space: pre-wrap;
+}
 
 /* ------------------ Reset Styles ------------------ */
 
 caption {
-  text-align: left; /* LTR */
-  font-weight: normal;
+    text-align: left;
+    /* LTR */
+    font-weight: normal;
 }
+
 [dir="rtl"] caption {
-  text-align: right;
+    text-align: right;
 }
+
 blockquote {
-  border-left: 4px solid #bbb; /* RTL */
-  font-style: italic;
-  margin: 1.5em 10px;
-  padding: 0.5em 10px;
+    border-left: 4px solid #bbb;
+    /* RTL */
+    font-style: italic;
+    margin: 1.5em 10px;
+    padding: 0.5em 10px;
 }
+
 [dir="rtl"] blockquote {
-  border-left: none;
-  border-right: 4px solid #bbb;
+    border-left: none;
+    border-right: 4px solid #bbb;
 }
+
 blockquote:before {
-  content: "\201C"; /* RTL */
-  font-size: 3em;
-  line-height: 0.1em;
-  margin-right: 0.2em;
-  vertical-align: -.4em;
+    content: "\201C";
+    /* RTL */
+    font-size: 3em;
+    line-height: 0.1em;
+    margin-right: 0.2em;
+    vertical-align: -.4em;
 }
+
 [dir="rtl"] blockquote:before {
-  content: "\201D";
+    content: "\201D";
 }
+
 blockquote:after {
-  content: "\201D"; /* RTL */
-  font-size: 3em;
-  line-height: 0.1em;
-  vertical-align: -.45em;
+    content: "\201D";
+    /* RTL */
+    font-size: 3em;
+    line-height: 0.1em;
+    vertical-align: -.45em;
 }
+
 [dir="rtl"] blockquote:after {
-  content: "\201C";
+    content: "\201C";
 }
+
 blockquote > p:first-child {
-  display: inline;
+    display: inline;
 }
+
 a.feed-icon {
-  display: inline-block;
-  padding: 15px 0 0 0;
+    display: inline-block;
+    padding: 15px 0 0 0;
 }

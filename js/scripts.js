@@ -1,11 +1,11 @@
 /**
  * @file
- * JS for Pure CSS.
+ * JS for Afterlight Tribute.
  */
 (function($, Backdrop, window, document, undefined) {
 
   // Show dropdown on hover.
-  Backdrop.behaviors.pure_css_dropdown = {
+  Backdrop.behaviors.afterlight_tribute_dropdown = {
     attach: function(context, setting) {
       //your custom action here
     }
@@ -19,9 +19,17 @@
     jQuery(window).scroll(function() {
       var win = jQuery(this);
       if (win.scrollTop() > 30) {
-        $("html.admin-bar header.l-header").css("top", "0px");
+        if (screen.width > 768) {
+          $("header.l-header").css("opacity", ".6").css("backgroundColor", "#bbb");
+          $("html.admin-bar header.l-header").css("top", "0px");
+        }
+        $(".block-system-header").css("display", "none");
       } else {
-        $("html.admin-bar header.l-header").css("top", "32px");
+        if (screen.width > 768) {
+          $("header.l-header").css("opacity", "1").css("backgroundColor", "transparent");
+          $("html.admin-bar header.l-header").css("top", "32px");
+        }
+        $(".block-system-header").css("display", "block");
       }
     });
 

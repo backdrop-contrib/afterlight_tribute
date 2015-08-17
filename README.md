@@ -1,17 +1,18 @@
-PURE CSS
+Afterlight Tribute
 --------
 
-Pure CSS is a basic, black and white, simple blank canvas theme using:
+Afterlight Tribute is a monochromatic blog theme with an option for a full-screen background image. Add your favorite background image or color to lend your personal flair. It is a basic, black and white, simple blank canvas theme using:
 
 - integration with Pure CSS by Yahoo! for more mobile friendly page elements
 - default Backdrop layouts
 - some Bartik default CSS
 - a single CSS file OR
 - SASS stylesheets using libSASS and Grunt for workflow
+- Responsive Menus module integration is highly recommended.
 - integration with either the Mobile Navigation module or Responsive Menus module for dropdown or mobile-friendly main menu.  Sliders, custom fonts and other theme features do not come with this and you are encouraged to incorporate separate modules for each page feature that you wish.
 
-A news site is a good example of how to use this theme.
-A children's charity website is probably not a good fit for this theme.
+A blog or organization that wishes to be seen as stylish is a good example of how to use this theme.
+A traditional/blue-chip type business is probably not a good fit for this theme.
 
 "This theme differentiates itself by its simplicity and structure. It does not incorporate a great list of features but rather embodies a frontend workflow. Many of the existing themes are bloated with features and overwrites. We do not want to rewrite output, just makes it easier to develop a theme in a structured way." - quote from the original developers.
 
@@ -58,9 +59,12 @@ SPECIAL THANKS
 This theme is based on of Xtheme for Drupal. <https://www.drupal.org/project/xtheme>
 Special thanks to <https://www.drupal.org/u/frankbaele> for this great work!
 
+This theme is Afterlight by Automattic. <https://wordpress.com/themes/afterlighte>
+Special thanks to them for this great work!
+
 This theme uses the PureCSS CSS toolkit from Yahoo!
 Special thanks to the developers at Yahoo! for this great work!
-This theme is not affiliated with Yahoo! or the PureCSS developers in any way.
+This theme is not affiliated with Yahoo! or the PureCSS developers or Automattic in any way.
 
 You may extend this theme with the documentation/classes from http://purecss.io
 

@@ -7,32 +7,35 @@
  */
 @charset "UTF-8";
 
-html {
-    ::selection,
-    ::-moz-selection {
-        color: $base-selected-text-color;
-        background: $base-selected-text-background-color;
-    }
-}
-
 a {
     color: $base-link-color;
 }
 
-a:hover, a:active {
-    color: $base-link-hover-color;
+.l-header ul.menu li a,
+.custom-menu .pure-menu-link,
+.custom-menu .pure-menu-heading,
+.button-success,
+.button-error,
+.button-warning,
+.button-secondary,
+.button-error,
+.danger,
+#edit-cancel,
+.button-secondary,
+.button,
+.basic-cart-add-to-cart-link,
+input[type=button],
+input[type=reset],
+input[type=submit] {
+    color: $white;
 }
 
-.l-container, .l-header ul.menu li a.active, .l-header ul.menu li.active-trail a {
-    background: inherit;
+.l-container, body .l-header ul.menu li a.active, .l-header ul.menu li.active-trail a {
+    background-color: transparent;
 }
 
 .comment .comment-arrow {
     border-color: $white;
-}
-
-tr.odd, code, kbd, pre, blockquote {
-    background-color: #f2f2f2;
 }
 
 kbd {
@@ -44,13 +47,16 @@ blockquote:before, blockquote:after {
 }
 
 table tr th {
-    background: #757575;
-    background: rgba(0, 0, 0, 0.51);
+    background: $realblack;
     border-bottom-style: none;
 }
 
+td.active {
+    background: transparent;
+}
+
 #skip-link a:visited {
-    background: $darkgrey;
+    background: $black;
     background: rgba(0, 0, 0, 0.6);
     color: $white;
 }
@@ -59,11 +65,8 @@ table tr th {
 .js .dropbutton-widget,
 .js .dropbutton-multiple.open .dropbutton-widget:hover,
 .custom-menu-toggle .bar,
-li.node-readmore a,
-footer.link-wrapper ul.links li,
-.l-header #mobile-menu li.active-trail a,
-.l-header .form-text {
-    background-color: $white;
+.l-header #mobile-menu li.active-trail a {
+    background-color: transparent;
 }
 
 .l-header .form-text {
@@ -89,21 +92,8 @@ footer.link-wrapper ul.links li,
     border-right: 1px solid #fff4f4;
 }
 
-.l-header .block-user-login input.form-submit {
-    border-color: $lightgrey;
-    border-color: rgba(255, 255, 255, 0.5);
-    background: $white;
-    color: $black;
-}
-
-.l-header .block-user-login input.form-submit:hover,
-.l-header .block-user-login input.form-submit:focus {
-    background: $white;
-    color: $black;
-}
-
 header.l-header, .l-header ul.menu li a.active, .l-header ul.menu li.active-trail a, .header-menu a {
-    background: $black;
+    background: transparent;
     color: $white;
 }
 
@@ -112,6 +102,41 @@ header.l-header, .l-header ul.menu li a.active, .l-header ul.menu li.active-trai
 }
 
 .gn-trigger {
+    background: $white !important;
+}
+
+#main-menu li a.active {
+    border-bottom: 1px solid #9daca9;
+}
+
+.block-system-main-menu ul.menu li {
+    background: transparent !important;
+}
+
+.responsive-menus-simple li a {
+    border-bottom: 0px solid !important;
+}
+
+.block-system-main-menu, .l-header ul.menu li, .block-system-header {
+    border-color: $white;
+    border-style: solid;
+    border-width: 1px 1px 1px 0;
+}
+
+.block-system-main-menu ul.menu li:hover a, .block-system-main-menu ul.menu li:focus a,
+.block-system-main-menu ul.menu li:hover ul.menu a, .block-system-main-menu ul.menu li:focus ul.menu a,
+.block-system-main-menu ul.menu li:hover ul.menu li a, .block-system-main-menu ul.menu li:focus ul.menu li a {
+    color: $realblack !important;
+}
+
+.block-system-main-menu ul.menu li:hover ul.menu, .block-system-main-menu ul.menu li:focus ul.menu,
+.block-system-main-menu ul.menu li:hover ul.menu li, .block-system-main-menu ul.menu li:focus ul.menu li {
+    background: $lightgrey !important;
+}
+
+.block-system-main-menu ul.menu li:hover, .block-system-main-menu ul.menu li:focus,
+.block-system-main-menu ul.menu li:hover ul.menu, .block-system-main-menu ul.menu li:focus ul.menu,
+.block-system-main-menu ul.menu li ul.menu li:hover, .block-system-main-menu ul.menu li ul.menu li:focus {
     background: $white !important;
 }
 
@@ -206,12 +231,14 @@ article .link-wrapper ul.links {
 }
 
 .tabs ul.primary li.active a {
-    border-bottom: 1px solid $white;
+    color: $white;
+    background-color: $realblack;
 }
 
 .tabs ul.primary li a {
-    color: $black;
-    background-color: #ededed;
+    color: $white;
+    background-color: transparent;
+    border: 1px solid $darkgrey;
 }
 
 fieldset legend {
@@ -244,6 +271,7 @@ input.form-search,
 textarea.form-textarea,
 select.form-select {
     border: 1px solid $lightgrey;
+    color: $realblack;
 }
 
 /* Disabled form elements */
@@ -278,73 +306,8 @@ input.form-button-disabled:active,
     border-color: #b8b8b8;
 }
 
-.button-success,
-.button-error,
-.button-warning,
-.button-secondary,
-.button-error,
-.danger,
-#edit-cancel,
-.button-secondary,
-.button,
-.basic-cart-add-to-cart-link,
-input[type=button],
-input[type=reset],
-input[type=submit] {
-    color: $white;
-}
-
-.button,
-.basic-cart-add-to-cart-link,
-input[type=button],
-input[type=submit],
-.button-success {
-    background: $base-link-color;
-}
-
-.button-error, .danger {
-    background: rgb(202, 60, 60);
-    /* this is a maroon */
-    color: $white;
-}
-
-.button-warning, #edit-cancel, input[type=reset] {
-    background: $base-link-hover-color;
-}
-
-.button-secondary {
-    background: rgb(66, 184, 221);
-    /* this is a light blue */
-}
-
-.danger:hover,
-#edit-cancel:hover,
-.danger:focus,
-#edit-cancel:focus,
-a.button:hover,
-a.button:focus,
-input[type=button]:hover,
-input[type=reset]:hover,
-input[type=submit]:hover
-input[type=button]:focus,
-input[type=reset]:focus,
-input[type=submit]:focus {
-    background: $lightgrey;
-    color: $white;
-    text-decoration: none;
-}
-
-.l-header ul.menu li a {
-    color: $white;
-}
-
 .custom-menu-wrapper {
     background-color: $black;
-}
-
-.custom-menu .pure-menu-link,
-.custom-menu .pure-menu-heading {
-    color: $white;
 }
 
 .custom-menu .pure-menu-link:hover,
@@ -359,14 +322,6 @@ input[type=submit]:focus {
 .custom-menu-bottom {
     border-top: 1px solid $lightgrey;
     background-color: $lightgrey \9;
-}
-
-#main-menu li a.active {
-    border-bottom: 1px solid #9daca9;
-}
-
-.block-system-main-menu ul.menu li {
-    background: $black !important;
 }
 
 tr.odd {
@@ -406,13 +361,24 @@ div.admin-panel {
     border: 1px solid $lightgrey;
 }
 
-table tr th {
-    background: $lightgrey;
+.basic-cart-grid {
+    color: $white;
+}
+
+#webform-configure-form, #webform-configure-form a {
+    color: $realblack;
 }
 
 @media only screen and (max-width: 768px) {
+    .l-header ul.mobile-menu ul.menu li a {
+        color: $realblack;
+    }
     .block-system-main-menu .mobile-menu-accordion li.expanded li,
     .block-system-main-menu .mobile-menu-basic li.expanded li {
         background: $lightgrey !important;
+    }
+    .block-system-main-menu ul.menu.responsive-menus-simple li {
+        background: #333 !important;
+        padding-bottom: 10px !important;
     }
 }

@@ -10,6 +10,52 @@
 
 /* ------------------ Table Styles ------------------ */
 
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+body:before {
+    background: #1a1a1a;
+    background-image: url("https://afterlightdemo.wordpress.com/wp-content/themes/pub/afterlight/images/background.jpg?m=1429627543g");
+    background-repeat: no-repeat;
+    background-position: top left;
+    background-attachment: fixed;
+    background-size: cover;
+    z-index: -2;
+    bottom: 0;
+    content: "";
+    display: block;
+    height: 100%;
+    left: 0;
+    position: fixed;
+    right: 0;
+    top: 0;
+    width: 100%;
+}
+
+body.page:after {
+    background-color: #1a1a1a;
+    opacity: 0.5;
+    z-index: -1;
+    bottom: 0;
+    content: "";
+    display: block;
+    height: 100%;
+    left: 0;
+    position: fixed;
+    right: 0;
+    top: 0;
+    width: 100%;
+}
+
+body {
+    word-wrap: break-word;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+}
+
 table {
     border: 0;
     border-spacing: 0;
@@ -170,7 +216,7 @@ body.admin-bar .layout {
 /* ------------------- Main ------------------- */
 
 .l-container {
-    margin-top: 130px;
+    margin-top: 220px;
     margin-bottom: 40px;
 }
 
@@ -190,12 +236,6 @@ body.admin-bar .layout {
     margin-top: 10px;
 }
 
-h1#page-title {
-    font-size: 2em;
-    line-height: 1;
-    margin-top: .5em;
-}
-
 main h2 {
     margin-bottom: 2px;
     font-size: 1.429em;
@@ -203,11 +243,11 @@ main h2 {
 }
 
 .node .content {
-    font-size: 1.071em;
+    font-size: 1.6em;
 }
 
 .view-mode-teaser .content {
-    font-size: 1em;
+    font-size: 1.6em;
 }
 
 .view-mode-teaser h2 {
@@ -296,6 +336,7 @@ main h2 {
 
 article .link-wrapper {
     text-align: right;
+    padding-top: 20px;
 }
 
 [dir="rtl"] article .link-wrapper {
@@ -452,6 +493,7 @@ article .link-wrapper ul.links {
     border: 1px solid;
     padding: 15px 20px;
     margin: 0 0 20px;
+    border-radius: 4px;
 }
 
 .l-sidebar h2 {
@@ -537,7 +579,6 @@ article .link-wrapper ul.links {
     margin: 0;
     overflow: hidden;
     border: none;
-    background: transparent url(../images/tabs-border.png) repeat-x left bottom;
 }
 
 .tabs ul.primary li {
@@ -563,7 +604,6 @@ article .link-wrapper ul.links {
     /* not LTR */
     padding: 0 10px 3px;
     margin: 0;
-    text-shadow: 0 1px 0 $white;
     -moz-border-radius-topleft: 6px;
     border-top-left-radius: 6px;
     -moz-border-radius-topright: 6px;

@@ -13,12 +13,37 @@ img {
     height: auto;
     max-width: 100%;
     outline: 0;
+    border-radius: 10px;
+}
+
+a {
+    text-decoration: none;
 }
 
 a.logo img {
     height: auto;
     max-width: 125px;
     max-height: 100px;
+}
+
+a:hover,
+a:active,
+a:focus,
+.danger:hover,
+#edit-cancel:hover,
+.danger:focus,
+#edit-cancel:focus,
+a.button:hover,
+a.button:focus,
+a.button-secondary:hover,
+a.button-secondary:focus,
+input[type=button]:hover,
+input[type=reset]:hover,
+input[type=submit]:hover,
+input[type=button]:focus,
+input[type=reset]:focus,
+input[type=submit]:focus {
+    opacity: .75px;
 }
 
 /* ---------------- Buttons    ---------------- */
@@ -56,8 +81,39 @@ input[type=submit] {
     margin-right: 0.6em;
 }
 
-a.button {
-    line-height: 2;
+.l-content a.button, .l-sidebar a.button {
+    border: 0px;
+    border-top: 1px solid $darkgrey;
+    font-weight: 300;
+}
+
+.l-content a.button-secondary, #edit-cancel {
+    display: inline-block;
+    padding-top: 3px;
+    font-weight: 300;
+}
+
+.button,
+.basic-cart-add-to-cart-link,
+input[type=button],
+input[type=submit],
+.button-success,
+input[type=reset],
+#edit-cancel,
+#edit-preview,
+#edit-delete {
+    background: transparent;
+    box-shadow: 1px 1px 1px 0px rgb(66, 184, 221);
+    border-left: 0px;
+    border-top: 1px solid $darkgrey;
+}
+
+.button-warning, .button-secondary, #edit-cancel, #edit-preview, input[type=reset] {
+    box-shadow: 1px 1px 1px 0px rgb(223, 117, 20);
+}
+
+.button-error, .danger, #edit-delete {
+    box-shadow: 1px 1px 1px 0px rgb(202, 60, 60);
 }
 
 @media screen and (max-width: 768px) {
@@ -85,6 +141,19 @@ a.button {
         text-align: center;
         line-height: normal;
     }
+}
+
+.l-content {
+    font-weight: 300;
+}
+
+.l-content a, .l-sidebar a {
+    font-weight: 600;
+}
+
+.l-sidebar h2 {
+    font-weight: 300;
+    font-style: italic;
 }
 
 /* -------------- Form Elements   ------------- */
@@ -185,12 +254,8 @@ input {
     padding: 4px;
 }
 
-input,
 textarea {
     font-size: 0.929em;
-}
-
-textarea {
     line-height: 1.5;
 }
 
@@ -210,10 +275,6 @@ textarea.form-textarea,
 select.form-select {
     box-sizing: border-box;
     max-width: 100%;
-}
-
-input.form-search {
-    color: $black;
 }
 
 .form-item {
@@ -417,7 +478,7 @@ h2.comment-form {
     width: 9em;
     margin-right: 5px;
     /* LTR */
-    padding: 0.6em;
+    padding: 0.4em;
 }
 
 [dir="rtl"] #search-form input#edit-keys,
@@ -452,10 +513,90 @@ h2.comment-form {
     display: block;
 }
 
-body .l-header ul.menu li a:hover {
-    text-decoration: underline;
+.field-name-field-tags .field-label {
+    display: none;
 }
 
-li:hover {
-    border: 0px solid;
+.field-name-field-tags {
+    width: 100%;
+    clear: both;
+    height: 50px;
+}
+
+.field-name-field-tags .field-items {
+    position: relative;
+    width: auto;
+    float: left;
+}
+
+.field-name-field-tags .field-item {
+    position: relative;
+    width: auto;
+    float: left;
+    padding-right: 10px;
+}
+
+.field-name-field-tags .field-items:before {
+    content: "";
+    position: absolute;
+    left: 6px;
+    width: 9px;
+    height: 15px;
+    margin-top: -8px;
+    background: $white;
+    -webkit-border-top-left-radius: 3px;
+    -webkit-border-top-right-radius: 3px;
+    -moz-border-radius: 3px 3px 0 0;
+    border-radius: 5px 5px 0 0;
+    -webkit-transform: rotate(-40deg);
+    -moz-transform: rotate(-40deg);
+    -ms-transform: rotate(-40deg);
+    -o-transform: rotate(-40deg);
+    transform: rotate(-40deg);
+}
+
+.field-name-field-tags .field-items:after {
+    content: "";
+    position: absolute;
+    left: 7px;
+    width: 4px;
+    height: 4px;
+    margin-top: -6px;
+    background: $realblack;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+}
+
+#webform-components-form, #webform-conditionals-form, #webform-emails-form, #webform-configure-form,
+#webform-components-form a, #webform-conditionals-form a, #webform-emails-form a, #webform-configure-form a {
+    font-size: 75%;
+}
+
+.node-readmore a {
+    position: relative;
+    display: block;
+    height: 25px;
+    float: right;
+    padding-right: 30px;
+    margin-top: -5px;
+}
+
+.node-readmore a:before,
+.node-readmore a:after {
+    position: absolute;
+    display: block;
+    content: "";
+    border: 12.5px solid transparent;
+}
+
+.node-readmore a:before {
+    top: 0;
+    right: 0px;
+    border-top-color: #fff;
+    -webkit-transform: rotate(-90deg);
+    -moz-transform: rotate(-90deg);
+    -ms-transform: rotate(-90deg);
+    -o-transform: rotate(-90deg);
+    transform: rotate(-90deg);
 }

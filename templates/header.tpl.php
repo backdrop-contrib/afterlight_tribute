@@ -22,6 +22,7 @@
 <?php if ($logo): ?>
   <a href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>" rel="home" class="logo">
     <img src="<?php print $logo; ?>" alt="<?php print t('Home'); ?>" />
+    <p class="name-and-slogan"><?php print $site_name; ?> </p>
   </a>
 <?php endif; ?>
 

@@ -1,5 +1,5 @@
-name = PureCSS
-description = A mobile theme for Backdrop CMS based on Yahoo PureCSS
+name = Afterlight Tribute
+description = A stylish theme for Backdrop CMS based on https://wordpress.com/themes/afterlight
 backdrop = 1.x
 type = theme
 version = 1.x-1.1
@@ -16,4 +16,3 @@ breakpoints[large] = (min-width: 55em)
 ; We need at least one setting for the theme settings page to appear in the
 ; menu. Color module provides our defaults, so we just register a dummy setting.
 settings[color] = true
-

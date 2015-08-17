@@ -80,18 +80,19 @@
 <article id="node-<?php print $node->nid; ?>" class="<?php print implode(' ', $classes); ?> clearfix"<?php print backdrop_attributes($attributes); ?> role="article">
 
   <header>
-    <?php print render($title_prefix); ?>
-    <?php if (!$page): ?>
-      <h2><a href="<?php print $node_url; ?>"><?php print $title; ?></a></h2>
-    <?php endif; ?>
-    <?php print render($title_suffix); ?>
-
     <?php if ($display_submitted): ?>
       <div class="meta submitted">
         <?php print $user_picture; ?>
-        <?php print $submitted; ?>
+        <?php print date("F j, Y",$created); ?>
       </div>
     <?php endif; ?>
+
+<?php print render($title_prefix); ?>
+    <?php if (!$page): ?>
+      <h1 class="page-title"><a href="<?php print $node_url; ?>"><?php print $title; ?></a></h1>
+    <?php endif; ?>
+    <?php print render($title_suffix); ?>
+
   </header>
 
   <div class="content clearfix"<?php print backdrop_attributes($content_attributes); ?>>
@@ -118,7 +119,7 @@
   <?php endif; ?>
 
   <?php if ($page && !empty($comments)): ?>
-    <section class="comments">  
+    <section class="comments">
       <?php if ($comments['comments']): ?>
         <h2 class="title"><?php print t('Comments'); ?></h2>
         <?php print render($comments['comments']); ?>
