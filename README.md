@@ -59,7 +59,7 @@ SPECIAL THANKS
 This theme is based on of Xtheme for Drupal. <https://www.drupal.org/project/xtheme>
 Special thanks to <https://www.drupal.org/u/frankbaele> for this great work!
 
-This theme is Afterlight by Automattic. <https://wordpress.com/themes/afterlighte>
+This theme is Afterlight by Automattic. <https://wordpress.com/themes/afterlight>
 Special thanks to them for this great work!
 
 This theme uses the PureCSS CSS toolkit from Yahoo!
