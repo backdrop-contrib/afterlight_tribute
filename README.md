@@ -1,20 +1,31 @@
 Afterlight Tribute
 --------
 
-Afterlight Tribute is a monochromatic blog theme with an option for a full-screen background image. Add your favorite background image or color to lend your personal flair. It is a basic, black and white, simple blank canvas theme using:
+Afterlight Tribute is a monochromatic blog theme with an option for a full-screen background image.  It is a simple blank canvas theme.
 
-- integration with Pure CSS by Yahoo! for more mobile friendly page elements
-- default Backdrop layouts
-- some Bartik default CSS
-- a single CSS file OR
-- SASS stylesheets using libSASS and Grunt for workflow
-- Responsive Menus module integration is highly recommended.
-- integration with either the Mobile Navigation module or Responsive Menus module for dropdown or mobile-friendly main menu.  Sliders, custom fonts and other theme features do not come with this and you are encouraged to incorporate separate modules for each page feature that you wish.
+- this theme is based on the popular, open-source Wordpress theme Afterlight.
 
-A blog or organization that wishes to be seen as stylish is a good example of how to use this theme.
-A traditional/blue-chip type business is probably not a good fit for this theme.
+- novices can edit the css/style.css file to alter the appearence of your website.
 
-"This theme differentiates itself by its simplicity and structure. It does not incorporate a great list of features but rather embodies a frontend workflow. Many of the existing themes are bloated with features and overwrites. We do not want to rewrite output, just makes it easier to develop a theme in a structured way." - quote from the original developers.
+- or front end developers can use the libSASS, liveReload, NPM and Grunt built-in tools for a styling workflow
+
+- novices can use the Responsive Menus or Mobile Navigation modules (downloaded separately) for dropdown or mobile-friendly main menu.
+
+- or front end developers can theme their own menus without needing to un-theme existing menu CSS
+
+- sliders, custom fonts and other theme features do not come with this theme and you are encouraged to incorporate separate modules for each page feature that you wish to have.
+
+- a blog or organization that wishes to be seen as stylish is a good example of how to use this theme.
+
+- a traditional/blue-chip type business is probably not a good fit for this theme.
+
+- this theme contains checkboxes to serve base style/script files from your site or from Cloudflare CDN
+
+- this theme contains checkboxes to serve modernizr script for browser feature detection, jquery-validate for form validation, fastclick for mobile tapping, and hammer for touch based events.  You must provide the custom integration for each.
+
+- this theme contains easy UI background-image settings for Juiced layouts.
+
+- Color module support is not active but on the todo-list for 2016
 
 CONTENTS OF THIS FILE
 ---------------------
@@ -23,10 +34,8 @@ CONTENTS OF THIS FILE
  - Tested
  - Known Issues
  - Special Thanks
- - Requirements
- - Installation
  - Coming From Drupal?
- - Casual Usage
+ - Javascript Usage
  - Advanced Usage
  - File Structure
  - SASS
@@ -34,24 +43,23 @@ CONTENTS OF THIS FILE
  - License
  - Maintainers
 
+
 TESTED
 -----
 
-@todo
-This theme has been manually tested successfully creating and viewing nodes and style guide in Backdrop with the Mobile Navigation, Webform and Responsive Menus modules.
+This theme is under heavy reconstruction and production usage is not recommended at this time.  Estimated production release is 2/2016.
+A former version of this theme has been manually tested successfully creating and viewing nodes and style guide in Backdrop with the Mobile Navigation, Webform and Responsive Menus modules.
+
+http://dev-backdropthemes.pantheon.io/afterlight-tribute
+
+http://dev-backdropthemes.pantheon.io/demo-afterlight-tribute
+
+http://dev-backdropthemes.pantheon.io/admin/appearance/styleguide/afterlight_tribute
 
 KNOWN ISSUES
 ---------------------
 
 NOTE -- this theme is somewhat stable but being developed state.  If you have spare time and shared ideas on how to propel it forward coding cleanly and under the appropriate licenses, you are welcome to join in and offer advice or build it together.
-
-This theme works as is by just installing it.
-
-If it bothers you that we don't use the Libraries module, file an issue and we can try to change it.
-
-When official information on using third-party frameworks becomes known, this will follow it.
-
-The first big change we will make to this theme when we have time is to run this theme through an "un-css" cleaner and chop out some css (even core) to make this download faster.  A major goal of this theme is to download your pages fast to the end user.
 
 SPECIAL THANKS
 --------------
@@ -59,7 +67,7 @@ SPECIAL THANKS
 This theme is based on of Xtheme for Drupal. <https://www.drupal.org/project/xtheme>
 Special thanks to <https://www.drupal.org/u/frankbaele> for this great work!
 
-This theme is Afterlight by Automattic. <https://wordpress.com/themes/afterlighte>
+This theme is based on Afterlight by Automattic. <https://wordpress.com/themes/afterlight>
 Special thanks to them for this great work!
 
 This theme uses the PureCSS CSS toolkit from Yahoo!
@@ -70,34 +78,20 @@ You may extend this theme with the documentation/classes from http://purecss.io
 
 "Pure plays well with other libraries, including Bootstrap and jQuery. As a developer, you can pull in Pure as a foundational CSS framework, and then include specific Bootstrap or jQuery modules that your application may require."
 
-This theme can use the Bourbon/Neat SASS extensions from thoughtbot.
+This theme can use the Bourbon/Neat SASS extensions from thoughtbot (disabled by default).
 Bourbon is maintained and funded by thoughtbot, inc. Tweet your questions or suggestions to @bourbonsass and while you’re at it follow us too.
 
 Copyright © 2011–2015 thoughtbot, inc. Bourbon is free software, and may be redistributed under the terms specified in the license.
-
-REQUIREMENTS
-------------
-
-None
-@todo
-
-INSTALLATION
-------------
-- download and install this theme per usual Backdrop themes: <https://backdropcms.org/guide/themes>
-- to see how this theme handles all the page elements, use this module <https://github.com/backdrop-contrib/styleguide>
 
 COMING FROM DRUPAL?
 -------------------
 
 If you are using Backdrop and have a previous knowledge of Drupal, you will notice that Drupal themes spend a lot of template files and CSS arranging things on the page where this theme doesn't so much.  This theme is more of a style guide of how page elements are supposed to look and not much layout.  It relies on the layouts module.
 
-This theme does not use the PureCSS grid by default.  It uses the default layouts module until layouts in Backdrop become more defined.
+This theme does not use the PureCSS grid or any grid by default -- it relies on the Layout module to provide that.
 
-CASUAL USAGE
+JAVASCRIPT USAGE
 ------------------
-
-If you would like to use CSS instead of SASS, edit the css/style.css file to alter the appearence of your website.
-Place your custom CSS at the bottom of the file.
 
 If you would like to add custom Javascript to your site, edit the js/scripts.js file.
 
@@ -117,19 +111,44 @@ Overall file structure
 - The SASS folder is for your SASS CSS partials.
 - Template.php contains PHP functions that alter the HTML of your Backdrop site.
 - config.rb contains settings if you are using SASS Compass
-- Gruntfile.js and package.json contain settings if you are using SASS Grunt
+- Gruntfile.js and package.json contain settings if you are using libSASS
+- If you are not aware, the sass and node_modules folders do not need to be on the live server.  They are for local development only.
 
 SASS file structure
 
-We are in the process of converting from random code from different places into follwowing:
+This theme is in the process of retro-fitting its CSS into SASS.
+We are in the process of converting from random code from different places into following:
 <http://www.sitepoint.com/architecture-sass-project/>
 <http://sass-guidelin.es/>
 
+This file organization is described as such:
+
+- style partial is where you can choose/add/remove which partials get added to the final overall CSS file
+- print partial is not used by default but would contain styles for viewing printed copies of your website
+- wysiwyg partial is not used by default but would contain styles for the rich text editors of your website
+
+BASE FOLDER
+- normalize and typography partials for people to work on the typography of the website
+
+HELPERS FOLDER
+- variables partial for people to work on the overall settings/defaults of the website
+- extendables, functions, and mixins partials for people to work on the theming functions of the website
+
+DESIGN FOLDER
+- layout partial for people to work on the big picture and layout aspects of the website
+- components partial for people to work on the atomic design, buttons, and small aspects of the website
+- navigation partial for people to work on the header and footer of the website
+- colors partial for people to work on the colors of the website
+
+PAGES FOLDER
+- partials for people to work on admin or authenticated user pages of the site which aren't public facing
+
+THEMES FOLDER
+- partials for people to work on different themes of the website (seasonal, regional, etc)
+
+
 USAGE
 -----
-
-If you would like to use CSS instead of SASS, edit the css/style.css file to alter the appearence of your website.
-
 
 SASS
 -----
@@ -152,6 +171,9 @@ In the root of the theme, type
 npm install
 
 to install the SASS tools for this theme.
+
+To enable livereload for development purposes, uncomment a line starting with this in the middle of your template.php file:
+// backdrop_add_js("document.write('<script src=\"http://' + (location.host
 
 After this has installed, use these commands on the command line in the root of your theme to make the theme do its thing:
 
@@ -194,8 +216,8 @@ This project is GPL v2 software. See the LICENSE.txt file in this directory for 
 Maintainers
 -----------
 
-- seeking
+- biolithic, seeking
 
 Ported to Backdrop by:
 
- - biolithic <https://github.com/biolithic>
+- biolithic <https://github.com/biolithic>

@@ -63,13 +63,15 @@ h1 {
   margin: 0.67em 0;
   padding: 0;
   font-size: 50px;
-  margin-top: 0px; }
+  margin-top: 0px;
+  clear: both; }
 
 h2 {
   margin: 0.83em 0;
   padding: 0;
   font-size: 1.5em;
-  margin-top: 0px; }
+  margin-top: 0px;
+  clear: both; }
 
 h3 {
   margin: 1em 0;
@@ -191,38 +193,6 @@ a.feed-icon {
 /* ------------------ Table Styles ------------------ */
 *, *:before, *:after {
   box-sizing: inherit; }
-
-body:before {
-  background: #1a1a1a;
-  background-image: url("https://afterlightdemo.wordpress.com/wp-content/themes/pub/afterlight/images/background.jpg?m=1429627543g");
-  background-repeat: no-repeat;
-  background-position: top left;
-  background-attachment: fixed;
-  background-size: cover;
-  z-index: -2;
-  bottom: 0;
-  content: "";
-  display: block;
-  height: 100%;
-  left: 0;
-  position: fixed;
-  right: 0;
-  top: 0;
-  width: 100%; }
-
-body.page:after {
-  background-color: #1a1a1a;
-  opacity: 0.5;
-  z-index: -1;
-  bottom: 0;
-  content: "";
-  display: block;
-  height: 100%;
-  left: 0;
-  position: fixed;
-  right: 0;
-  top: 0;
-  width: 100%; }
 
 body {
   word-wrap: break-word;
@@ -630,7 +600,7 @@ article .link-wrapper ul.links {
 .tabs ul.primary {
   padding: 0 3px;
   margin: 0;
-  overflow: hidden;
+  overflow: visible;
   border: none; }
 
 .tabs ul.primary li {
@@ -831,7 +801,7 @@ a.logo img {
   max-height: 100px; }
 
 a:hover, a:active, a:focus, .danger:hover, #edit-cancel:hover, .danger:focus, #edit-cancel:focus, a.button:hover, a.button:focus, a.button-secondary:hover, a.button-secondary:focus, input[type=button]:hover, input[type=reset]:hover, input[type=submit]:hover, input[type=button]:focus, input[type=reset]:focus, input[type=submit]:focus {
-  opacity: .75px; }
+  opacity: .66; }
 
 /* ---------------- Buttons    ---------------- */
 [dir="rtl"] input.form-submit, [dir="rtl"] a.button {
@@ -876,14 +846,15 @@ a:hover, a:active, a:focus, .danger:hover, #edit-cancel:hover, .danger:focus, #e
   .button-success, .button-error, .button-warning, .button-secondary, .button-error, .danger, #edit-cancel, .button-secondary, .basic-cart-add-to-cart-link, input[type=button], input[type=reset], input[type=submit] {
     height: 50px;
     width: auto; }
-  .danger, #edit-cancel {
+  .l-content a.button-secondary, .danger, #edit-cancel {
     display: inline-block;
-    height: 35px;
-    width: 70px;
-    padding-top: 14px;
+    height: 53px;
+    width: auto;
+    padding-top: 12px;
     padding-bottom: 0px;
     text-align: center;
-    line-height: normal; } }
+    line-height: normal;
+    margin-top: 5px; } }
 
 .l-content {
   font-weight: 300; }
@@ -990,7 +961,7 @@ input.form-text, input.form-tel, input.form-email, input.form-url, input.form-co
 
 .form-item {
   margin-bottom: 1em;
-  margin-top: 2px; }
+  margin-top: 30px; }
 
 .form-item label {
   font-size: 0.929em; }
@@ -1557,8 +1528,9 @@ body:not(.front) .block-system-main-menu {
     width: 100% !important; } }
 
 /* ------------------ Footer ------------------ */
-.l-footer-columns, .l-footer {
-  font-size: 0.857em; }
+.l-footer {
+  padding: 30px;
+  text-align: center; }
 
 .l-footer-columns .block, .l-footer .block {
   margin: 0.5em auto;
@@ -1597,22 +1569,6 @@ body:not(.front) .block-system-main-menu {
   margin: 0;
   padding: 0; }
 
-.l-footer-columns li a, .l-footer li a {
-  display: block;
-  line-height: 1.2;
-  padding: 0.8em 2px 0.8em 20px;
-  /* LTR */
-  text-indent: -15px; }
-
-[dir="rtl"] .l-footer-columns li a, [dir="rtl"] .l-footer li a {
-  padding: 0.8em 20px 0.8em 2px; }
-
-.l-footer-columns li a:hover, .l-footer-columns li a:focus, .l-footer li a:hover, .l-footer li a:focus {
-  text-decoration: none; }
-
-.l-footer {
-  padding: 35px 0 30px; }
-
 .l-footer .section {
   letter-spacing: 0.2;
   padding-top: 30px; }
@@ -1629,10 +1585,10 @@ body:not(.front) .block-system-main-menu {
   padding: 0; }
 
 .l-footer .menu li a {
-  float: left;
-  /* LTR */
-  padding: 0 12px;
-  display: block; }
+  display: block;
+  width: 100%;
+  clear: both;
+  padding-bottom: 1em; }
 
 [dir="rtl"] .l-footer .menu li a {
   float: right; }
@@ -1663,7 +1619,10 @@ body:not(.front) .block-system-main-menu {
  * these defaults come from the Bartik theme and are being transitioned from CSS into SASS variables
  * Big thanks to Jen Simmons for these defaults https://www.drupal.org/u/jensimmons
  */
-a {
+body {
+  background: #999; }
+
+a, li a.active {
   color: #fff; }
 
 .l-header ul.menu li a, .custom-menu .pure-menu-link, .custom-menu .pure-menu-heading, .button-success, .button-error, .button-warning, .button-secondary, .button-error, .danger, #edit-cancel, .button-secondary, .button, .basic-cart-add-to-cart-link, input[type=button], input[type=reset], input[type=submit] {
@@ -1737,13 +1696,13 @@ header.l-header, .l-header ul.menu li a.active, .l-header ul.menu li.active-trai
   border-style: solid;
   border-width: 1px 1px 1px 0; }
 
-.block-system-main-menu ul.menu li:hover a, .block-system-main-menu ul.menu li:focus a, .block-system-main-menu ul.menu li:hover ul.menu a, .block-system-main-menu ul.menu li:focus ul.menu a, .block-system-main-menu ul.menu li:hover ul.menu li a, .block-system-main-menu ul.menu li:focus ul.menu li a {
+.l-header .block-system-main-menu ul.menu li:hover a, .block-system-main-menu ul.menu li:focus a, .l-header .block-system-main-menu ul.menu li:hover ul.menu a, .block-system-main-menu ul.menu li:focus ul.menu a, .l-header .block-system-main-menu ul.menu li:hover ul.menu li a, .block-system-main-menu ul.menu li:focus ul.menu li a {
   color: #000 !important; }
 
-.block-system-main-menu ul.menu li:hover ul.menu, .block-system-main-menu ul.menu li:focus ul.menu, .block-system-main-menu ul.menu li:hover ul.menu li, .block-system-main-menu ul.menu li:focus ul.menu li {
+.l-header .block-system-main-menu ul.menu li:hover ul.menu, .block-system-main-menu ul.menu li:focus ul.menu, .l-header .block-system-main-menu ul.menu li:hover ul.menu li, .block-system-main-menu ul.menu li:focus ul.menu li {
   background: #eee !important; }
 
-.block-system-main-menu ul.menu li:hover, .block-system-main-menu ul.menu li:focus, .block-system-main-menu ul.menu li:hover ul.menu, .block-system-main-menu ul.menu li:focus ul.menu, .block-system-main-menu ul.menu li ul.menu li:hover, .block-system-main-menu ul.menu li ul.menu li:focus {
+.l-header .block-system-main-menu ul.menu li:hover, .block-system-main-menu ul.menu li:focus, .l-header .block-system-main-menu ul.menu li:hover ul.menu, .block-system-main-menu ul.menu li:focus ul.menu, .l-header .block-system-main-menu ul.menu li ul.menu li:hover, .block-system-main-menu ul.menu li ul.menu li:focus {
   background: #fff !important; }
 
 .view-mode-teaser h2 a {
@@ -1820,7 +1779,6 @@ article .link-wrapper ul.links {
 
 fieldset legend {
   background: #dbdbdb;
-  border: 1px solid #eee;
   color: #3b3b3b; }
 
 fieldset legend a {
@@ -1829,7 +1787,7 @@ fieldset legend a {
 fieldset legend a:hover, fieldset legend a:focus, fieldset legend a:active {
   color: #252525; }
 
-fieldset .fieldset-description {
+fieldset .fieldset-description, fieldset {
   color: #3c3c3c; }
 
 input.form-text, input.form-tel, input.form-email, input.form-url, input.form-color, input.form-number, input.form-search, textarea.form-textarea, select.form-select {
@@ -1852,9 +1810,10 @@ input.form-button-disabled, input.form-button-disabled:hover, input.form-button-
 #search-block-form input.form-submit, #search-form input.form-submit {
   border-color: #e4e4e4 #d2d2d2 #b4b4b4; }
 
-.js .dropbutton-widget:hover {
+.js .dropbutton-widget a:hover {
   background-color: #f8f8f8;
-  border-color: #b8b8b8; }
+  border-color: #b8b8b8;
+  color: #252525; }
 
 .custom-menu-wrapper {
   background-color: #252525; }
