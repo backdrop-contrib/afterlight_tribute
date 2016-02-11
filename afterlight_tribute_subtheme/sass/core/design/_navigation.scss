@@ -1,0 +1,534 @@
+/**
+ * Navigation
+ *
+ * footer/header/main menu/navigation go in this file
+ * these defaults come from the Bartik theme and are being transitioned from CSS into SASS variables
+ * Big thanks to Jen Simmons for these defaults https://www.drupal.org/u/jensimmons
+ */
+@charset "UTF-8" ;
+
+/* ------------------ Header ------------------ */
+#skip-link {
+  left: 50%;
+  margin-left: -5.25em;
+  margin-top: 0;
+  position: absolute;
+  width: auto;
+  z-index: 50;
+}
+
+#skip-link a,
+#skip-link a:link,
+#skip-link a:visited {
+  display: block;
+  font-size: 0.94em;
+  line-height: 1.7;
+  padding: 1px 10px 2px 10px;
+  text-decoration: none;
+  -moz-border-radius: 0 0 10px 10px;
+  border-radius: 0 0 10px 10px;
+}
+
+#skip-link a:hover,
+#skip-link a:active,
+#skip-link a:focus {
+  outline: 0;
+}
+
+header.l-header {
+
+  width: 100%;
+  z-index: 998;
+  top: 0;
+  min-height: 50px;
+}
+
+.header-menu a {
+  letter-spacing: 1px;
+  font-weight: 600;
+  padding: 20px 15px;
+}
+
+.block-system-header {
+  float: left;
+  width: 100%;
+  border-top: 0px;
+  z-index: 1001;
+}
+
+.block-system-header .logo {
+  float: left;
+
+  /* LTR */
+  padding: 15px 15px 0px 10px;
+
+  /* LTR */
+}
+
+[dir="rtl"] .block-system-header .logo {
+  float: right;
+  padding: 15px 10px 0px 15px;
+}
+
+.block-system-header .name-and-slogan {
+  float: left;
+
+  /* LTR */
+  padding-top: 34px;
+  margin: 0 0 30px;
+  padding-right: 5px;
+}
+
+[dir="rtl"] .block-system-header .name-and-slogan {
+  float: right;
+}
+
+/* Region header blocks. */
+.l-header .block:after {
+
+  /* Clearfix */
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.l-header .block .content {
+  margin: 0;
+  padding: 0;
+}
+
+.l-header .block ul {
+  margin: 0;
+  padding: 0;
+}
+
+.l-header .block li {
+  list-style: none;
+  list-style-image: none;
+  padding: 0;
+}
+
+.l-header .form-text {
+  margin-right: 2px;
+
+  /* LTR */
+  width: 120px;
+}
+
+[dir="rtl"] .l-header .form-text {
+  margin-left: 2px;
+  margin-right: 0;
+}
+
+/* User Login block in the header region */
+.l-header .block-user-login {
+  width: auto;
+}
+
+.l-header .block-user-login .content {
+  margin-top: 2px;
+}
+
+.l-header .block-user-login .form-item {
+  float: left;
+
+  /* LTR */
+  margin: 0;
+  padding: 0;
+}
+
+[dir="rtl"] .l-header .block-user-login .form-item {
+  float: right;
+}
+
+.l-header .block-user-login div.item-list,
+.l-header .block-user-login div.description {
+  font-size: 0.916em;
+  margin: 0;
+}
+
+.l-header .block-user-login div.item-list {
+  clear: both;
+}
+
+.l-header .block-user-login div.description {
+  display: inline;
+}
+
+.l-header .block-user-login .item-list ul {
+  padding: 0;
+  line-height: 1;
+}
+
+.l-header .block-user-login .item-list li {
+  list-style: none;
+  float: left;
+
+  /* LTR */
+  padding: 3px 0 1px;
+}
+
+[dir="rtl"] .l-header .block-user-login .item-list li {
+  float: right;
+}
+
+.l-header .block-user-login .item-list li.last {
+  padding-left: 0.5em;
+
+  /* LTR */
+}
+
+[dir="rtl"] .l-header .block-user-login .item-list li.last {
+  padding-left: 0;
+  padding-right: 0.5em;
+}
+
+.l-header .block-user-login .form-actions {
+  margin: 4px 0 0;
+  padding: 0;
+  clear: both;
+}
+
+/* Search block in region header. */
+.l-header .block-search-form {
+  width: 235px;
+  float: left;
+  margin-top: -7px;
+}
+
+.l-header .block-search-form .block-title {
+  display: none;
+}
+
+.l-header .block-search-form .form-text {
+  width: 154px;
+}
+
+/* Language switcher block in region header. */
+.l-header .block-locale ul li {
+  display: inline;
+  padding: 0 0.5em;
+}
+
+/* --------------- Header Menu ------------ */
+.header-menu {
+  float: right;
+
+  /* LTR */
+  font-size: 0.929em;
+  margin: 10px 10px 0;
+}
+
+[dir="rtl"] .header-menu {
+  float: left;
+}
+
+/* --------------- Main Menu ------------ */
+
+/* Region header block menus. */
+.l-header .header-menu {
+  padding: 0;
+  margin: 10px 10px 0;
+  display: inline;
+}
+
+.l-header .header-menu li {
+  display: inline;
+  list-style-type: none;
+  padding: 0 0.5em;
+  margin: 0;
+}
+
+.l-header .header-menu li.last a {
+  border-bottom: 0;
+}
+
+.block-system-main-menu h2.block-title,
+.mean-bar h2.block-title {
+  display: none;
+}
+
+.gn-menu-main {
+  top: 55px !important;
+}
+
+.l-header ul.menu {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.l-header ul.menu li {
+  float: left;
+
+  /* LTR */
+  margin-top: -1px;
+  position: relative;
+  font-size: 1.0625em;
+  line-height: 1.411764706;
+}
+
+.block-system-main-menu ul.menu li {
+  padding: 0px !important;
+}
+
+.l-header ul.menu li a {
+  display: block;
+  font-size: 1.0625em;
+  line-height: 1.33334;
+  padding: 13px 24px;
+  text-decoration: none;
+  white-space: nowrap;
+  font-weight: 300;
+}
+
+.l-header ul.menu li.expanded > a:after {
+  content: "";
+  position: absolute;
+  top: 60%;
+  right: 8px;
+  width: 7px;
+  height: 7px;
+  border-width: 0 3px 3px 0;
+  border-style: solid;
+  border-color: $white;
+  margin-top: -5px;
+  background: transparent;
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+.l-header ul.menu li a:focus,
+.l-header ul.menu li a:hover {
+  text-decoration: none !important;
+}
+
+.block-system-main-menu ul.menu li ul {
+  top: 55px !important;
+}
+
+[dir="rtl"] .l-header ul.menu li {
+  float: right;
+}
+
+.l-header ul.menu a {
+  float: left;
+
+  /* LTR */
+  height: 2.4em;
+  line-height: 2.4em;
+  padding: 0 0.8em;
+  text-decoration: none;
+}
+
+[dir="rtl"] .l-header ul.menu a {
+  float: right;
+}
+
+.block-system-main-menu ul.menu li ul {
+  border: 0px solid !important;
+}
+
+body:not(.front) .block-system-main-menu {
+  top: 0px !important;
+}
+
+.block-system-main-menu {
+  border: 0px;
+}
+
+.l-header ul.menu li {
+  border-bottom: 0px;
+}
+
+@media only screen and (min-width: 768px) {
+  html.admin-bar header.l-header {
+    top: 32px;
+  }
+
+  .l-header ul.menu li a {
+    padding-right: 30px;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  header.l-header {
+    position: relative;
+  }
+
+  .l-header .header-menu li {
+    display: block;
+    list-style-type: none;
+    padding: 0em;
+    margin: 0;
+    clear: both;
+  }
+
+  .l-header ul.menu.responsive-menus-simple li {
+    border: 0px;
+  }
+
+  .header-menu a {
+    padding: 0px;
+  }
+
+  .block-system-main-menu {
+    width: 100%;
+    float: left;
+  }
+
+  body:not(.logged-in) .block-system-header .logo {
+    padding: 0px;
+  }
+
+  html.admin-bar .block-system-main-menu {
+    top: 0px;
+  }
+
+  .l-container {
+    margin-top: 170px;
+  }
+
+  .responsive-menus.responsified .responsive-menus-simple li a {
+    padding: 5px;
+  }
+
+  .responsive-menus.responsified .responsive-menus-simple li ul li a {
+    padding-top: 5px;
+    padding-bottom: 5px;
+  }
+
+  .l-header ul.menu li a {
+    line-height: 1em;
+    font-size: 16px;
+  }
+}
+
+@media only screen and (max-width: 330px) {
+  .block-system-main-menu {
+    width: 215px;
+  }
+
+  #mobile-menu-inner.accordion {
+    width: 100% !important;
+  }
+}
+
+/* ------------------ Footer ------------------ */
+.l-footer {
+  padding: 30px;
+  text-align: center;
+}
+
+.l-footer-columns .block,
+.l-footer .block {
+  margin: 0.5em auto;
+  padding: 0;
+  border: none;
+}
+
+.l-columns .block .content,
+.l-footer .block .content {
+  padding: 0.5em 0;
+  margin-top: 0;
+}
+
+.l-footer .block h2 {
+  margin: 0;
+}
+
+.l-footer-columns {
+  padding-top: 30px;
+}
+
+.l-footer-columns h2,
+.l-footer h2 {
+  font-size: 1em;
+  margin-bottom: 0;
+  padding-bottom: 3px;
+  text-transform: uppercase;
+}
+
+.l-footer-columns .content,
+.l-footer .content {
+  margin-top: 0;
+}
+
+.l-footer-columns p,
+.l-footer p {
+  margin-top: 1em;
+}
+
+.l-footer-columns ul,
+.l-footer ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.l-footer-columns li,
+.l-footer li {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.l-footer .section {
+  letter-spacing: 0.2;
+  padding-top: 30px;
+}
+
+.l-footer .region {
+  margin-top: 20px;
+}
+
+.l-footer .block {
+  clear: both;
+}
+
+.l-footer .menu,
+.l-footer .menu li {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.l-footer .menu li a {
+  display: block;
+  width: 100%;
+  clear: both;
+  padding-bottom: 1em;
+}
+
+[dir="rtl"] .l-footer .menu li a {
+  float: right;
+}
+
+.l-footer .menu li.first a {
+  padding-left: 0;
+
+  /* LTR */
+}
+
+[dir="rtl"] .l-footer .menu li.first a {
+  padding-right: 0;
+  padding-left: 12px;
+}
+
+.l-footer .menu li.last a {
+  padding-right: 0;
+
+  /* LTR */
+  border-right: none;
+
+  /* LTR */
+}
+
+[dir="rtl"] .l-footer .menu li.last a {
+  padding-left: 0;
+  padding-right: 12px;
+  border-left: none;
+}

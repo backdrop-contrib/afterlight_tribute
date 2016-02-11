@@ -14,7 +14,6 @@
   $(document).ready(function() {
 
     // run Javascript on page load here
-    console.log("Welcome to the console");
 
   });
 })(jQuery, Backdrop, this, this.document);

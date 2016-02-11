@@ -1,14 +1,22 @@
 /**
  * Style file
  *
- * This file is compiled into style.css
-
-@import "bourbon";
-@import "neat";
+ * This file is compiled into css/your-custom.css
+ * Uncomment the lines of the features you would like to use.
+ * Comment the lines of the features you don't need on this website
  */
-/* ---------- Import base ---------- */
+/* ---------- Import parent theme base ---------- */
 /* Colors */
 /* Font stuff */
+/**
+ * Variables
+ *
+ * Keep your site variables here
+ */
+/**
+ * Functions
+ *
+ */
 /**
  * Functions
  *
@@ -19,6 +27,11 @@
  * Snippets of reusable CSS to develop faster and keep code readable
  */
 /* Overwrite the default media mixin for ie9 fallback */
+/**
+ * Mixins
+ *
+ * Snippets of reusable CSS to develop faster and keep code readable
+ */
 /**
  * Extendables
  *
@@ -31,6 +44,11 @@
     display: table;
     clear: both; }
 
+/**
+ * Extendables
+ *
+ * Collect all of your extendable classes, ids and silent extendables.
+ */
 /*
  * Typography
  *
@@ -181,7 +199,12 @@ a.feed-icon {
   display: inline-block;
   padding: 15px 0 0 0; }
 
-/* ---------- Import custom styles ---------- */
+/*
+ * Typography
+ *
+ * Text styles, fonts, not colours go in this file
+ * these defaults come from the Bartik theme
+ */
 /**
  * Layout
  *
@@ -314,7 +337,7 @@ body.admin-bar .layout {
 
 /* ------------------- Main ------------------- */
 .l-container {
-  margin-top: 220px;
+  margin-top: 40px;
   margin-bottom: 40px; }
 
 .l-messages {
@@ -357,7 +380,8 @@ main h2 {
 
 .meta {
   font-size: 0.857em;
-  margin-bottom: -5px; }
+  margin-bottom: 15px;
+  padding-top: 7px; }
 
 .submitted .user-picture img {
   float: left;
@@ -535,7 +559,9 @@ article .link-wrapper ul.links {
   border: 1px solid;
   padding: 15px 20px;
   margin: 0 0 20px;
-  border-radius: 4px; }
+  border-radius: 6px;
+  border-left: 0px;
+  border-right: 0px; }
 
 .l-sidebar h2 {
   margin: 0 0 0.5em;
@@ -683,6 +709,9 @@ ul.action-links li a {
   padding-right: 15px; }
 
 /* -------------- Breadcrumbs   -------------- */
+.l-top .breadcrumb {
+  padding-left: 20px; }
+
 .breadcrumb {
   font-size: 0.929em;
   padding: 0; }
@@ -777,6 +806,13 @@ div.admin-panel .description {
   .layout--two-column .l-content, .layout--two-column .l-sidebar {
     padding: 0 5px; } }
 
+/**
+ * Layout
+ *
+ * Layout theming should go in this file
+ * blocks, sidebars, nodes, regions and non-forms/buttons/footer/header
+ * these defaults come from the Bartik theme
+ */
 /*
  * Components
  *
@@ -1213,6 +1249,13 @@ h2.comment-form {
   -o-transform: rotate(-90deg);
   transform: rotate(-90deg); }
 
+/*
+ * Components
+ *
+ * Include your design elements in this file
+ * forms/buttons and specific page elements
+ * these defaults come from the Bartik theme and are being transitioned from CSS into SASS variables
+ */
 /**
  * Navigation
  *
@@ -1242,8 +1285,6 @@ h2.comment-form {
   outline: 0; }
 
 header.l-header {
-  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.5) inset;
-  position: fixed;
   width: 100%;
   z-index: 998;
   top: 0;
@@ -1257,7 +1298,8 @@ header.l-header {
 .block-system-header {
   float: left;
   width: 100%;
-  border-top: 0px; }
+  border-top: 0px;
+  z-index: 1001; }
 
 .block-system-header .logo {
   float: left;
@@ -1612,6 +1654,12 @@ body:not(.front) .block-system-main-menu {
   padding-right: 12px;
   border-left: none; }
 
+/**
+ * Navigation
+ *
+ * footer/header/main menu/navigation go in this file
+ * these defaults come from the Bartik theme and are being transitioned from CSS into SASS variables
+ */
 /*
  * Colours
  *
@@ -1694,7 +1742,7 @@ header.l-header, .l-header ul.menu li a.active, .l-header ul.menu li.active-trai
 .block-system-main-menu, .l-header ul.menu li, .block-system-header {
   border-color: #fff;
   border-style: solid;
-  border-width: 1px 1px 1px 0; }
+  border-width: 0px 0px 1px 0px; }
 
 .l-header .block-system-main-menu ul.menu li:hover a, .block-system-main-menu ul.menu li:focus a, .l-header .block-system-main-menu ul.menu li:hover ul.menu a, .block-system-main-menu ul.menu li:focus ul.menu a, .l-header .block-system-main-menu ul.menu li:hover ul.menu li a, .block-system-main-menu ul.menu li:focus ul.menu li a {
   color: #000 !important; }
@@ -1870,3 +1918,10 @@ div.admin-panel {
   .block-system-main-menu ul.menu.responsive-menus-simple li {
     background: #333 !important;
     padding-bottom: 10px !important; } }
+
+/*
+ * Colours
+ *
+ * Colours go in this file
+ * these defaults come from the Bartik theme and are being transitioned from CSS into SASS variables
+ */
