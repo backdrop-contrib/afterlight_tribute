@@ -1,9 +1,5 @@
 /**
- * Navigation
- *
  * footer/header/main menu/navigation go in this file
- * these defaults come from the Bartik theme and are being transitioned from CSS into SASS variables
- * Big thanks to Jen Simmons for these defaults https://www.drupal.org/u/jensimmons
  */
 @charset "UTF-8" ;
 
@@ -386,10 +382,6 @@ body:not(.front) .block-system-main-menu {
 
   html.admin-bar .block-system-main-menu {
     top: 0px;
-  }
-
-  .l-container {
-    margin-top: 170px;
   }
 
   .responsive-menus.responsified .responsive-menus-simple li a {

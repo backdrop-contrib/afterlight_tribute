@@ -12,12 +12,257 @@ function afterlight_tribute_subtheme_preprocess_maintenance_page(&$variables) {
   backdrop_add_css(backdrop_get_path('theme', 'bartik') . '/css/maintenance-page.css');
 }
 
+
+
+
 /**
- * Implements hook_preprocess_layout().
+ * Implements template_preprocess_page().
  */
+function afterlight_tribute_subtheme_preprocess_page(&$variables) {
+
+
+$current_layout = "default";
+$uses_admin_width = config_get('afterlight_tribute_subtheme.settings', 'use_max_width');
+  if ($uses_admin_width) {
+
+    $uses_layout_width1 = config_get('afterlight_tribute_subtheme.settings', 'max_width_element1');
+    if ($uses_layout_width1 < 1) {
+      $max_width_layouts1 = config_get('afterlight_tribute_subtheme.settings', 'site_layouts1');
+      $max_width_number1 = config_get('afterlight_tribute_subtheme.settings', 'max_width_number1');
+      foreach ($max_width_layouts1 as $max_width_layout) {
+        if (!empty($max_width_layout)) {
+          if ( $max_width_layout == $current_layout ) {
+
+            switch ($max_width_number1) {
+              case "0":
+              $variables['classes'][] = 'container';
+              $variables['classes'][] = 'container-800';
+              break;
+              case "1":
+              $variables['classes'][] = 'container';
+              $variables['classes'][] = 'container-960';
+              break;
+              case "2":
+              $variables['classes'][] = 'container';
+              break;
+              case "3":
+              $variables['classes'][] = 'container';
+              $variables['classes'][] = 'container-1200';
+              break;
+              case "4":
+              $variables['classes'][] = 'container';
+              $variables['classes'][] = 'container-1440';
+              break;
+              default:
+              break;
+              }
+          }
+        }
+      }
+    }
+
+
+    $uses_layout_width2 = config_get('afterlight_tribute_subtheme.settings', 'max_width_element2');
+    if ($uses_layout_width2 > 0) {
+      $max_width_layouts2 = config_get('afterlight_tribute_subtheme.settings', 'site_layouts2');
+      $max_width_number2 = config_get('afterlight_tribute_subtheme.settings', 'max_width_number2');
+      foreach ($max_width_layouts2 as $max_width_layout) {
+        if (!empty($max_width_layout)) {
+          if ( $max_width_layout == $current_layout ) {
+
+            switch ($max_width_number2) {
+              case "0":
+              $variables['classes'][] = 'container';
+              $variables['classes'][] = 'container-800';
+              break;
+              case "1":
+              $variables['classes'][] = 'container';
+              $variables['classes'][] = 'container-960';
+              break;
+              case "2":
+              $variables['classes'][] = 'container';
+              break;
+              case "3":
+              $variables['classes'][] = 'container';
+              $variables['classes'][] = 'container-1200';
+              break;
+              case "4":
+              $variables['classes'][] = 'container';
+              $variables['classes'][] = 'container-1440';
+              break;
+              default:
+              break;
+              }
+          }
+        }
+      }
+    }
+
+
+
+    $uses_layout_width3 = config_get('afterlight_tribute_subtheme.settings', 'max_width_element3');
+    if ($uses_layout_width3 > 0) {
+      $max_width_layouts3 = config_get('afterlight_tribute_subtheme.settings', 'site_layouts3');
+      $max_width_number3 = config_get('afterlight_tribute_subtheme.settings', 'max_width_number3');
+      foreach ($max_width_layouts3 as $max_width_layout) {
+        if (!empty($max_width_layout)) {
+          if ( $max_width_layout == $current_layout ) {
+
+            switch ($max_width_number3) {
+              case "0":
+              $variables['classes'][] = 'container';
+              $variables['classes'][] = 'container-800';
+              break;
+              case "1":
+              $variables['classes'][] = 'container';
+              $variables['classes'][] = 'container-960';
+              break;
+              case "2":
+              $variables['classes'][] = 'container';
+              break;
+              case "3":
+              $variables['classes'][] = 'container';
+              $variables['classes'][] = 'container-1200';
+              break;
+              case "4":
+              $variables['classes'][] = 'container';
+              $variables['classes'][] = 'container-1440';
+              break;
+              default:
+              break;
+              }
+          }
+        }
+      }
+    }
+
+
+
+  }
+}
+
 function afterlight_tribute_subtheme_preprocess_layout(&$variables) {
-  if ($variables['content']['header']) {
-    $variables['content']['header'] = '<div class="l-header-inner">' . $variables['content']['header'] . '</div>';
+  if ($variables['is_front']) {
+    $variables['classes'][] = 'layout-front';
+  }
+
+
+$current_layout = $variables["layout"]->name;
+$uses_admin_width = config_get('afterlight_tribute_subtheme.settings', 'use_max_width');
+  if ($uses_admin_width) {
+
+    $uses_layout_width1 = config_get('afterlight_tribute_subtheme.settings', 'max_width_element1');
+    if ($uses_layout_width1 > 0) {
+      $max_width_layouts1 = config_get('afterlight_tribute_subtheme.settings', 'site_layouts1');
+      $max_width_number1 = config_get('afterlight_tribute_subtheme.settings', 'max_width_number1');
+      foreach ($max_width_layouts1 as $max_width_layout) {
+        if (!empty($max_width_layout)) {
+          if ( $max_width_layout == $current_layout ) {
+
+            switch ($max_width_number1) {
+              case "0":
+              $variables['classes'][] = 'container';
+              $variables['classes'][] = 'container-800';
+              break;
+              case "1":
+              $variables['classes'][] = 'container';
+              $variables['classes'][] = 'container-960';
+              break;
+              case "2":
+              $variables['classes'][] = 'container';
+              break;
+              case "3":
+              $variables['classes'][] = 'container';
+              $variables['classes'][] = 'container-1200';
+              break;
+              case "4":
+              $variables['classes'][] = 'container';
+              $variables['classes'][] = 'container-1440';
+              break;
+              default:
+              break;
+              }
+          }
+        }
+      }
+    }
+
+
+    $uses_layout_width2 = config_get('afterlight_tribute_subtheme.settings', 'max_width_element2');
+    if ($uses_layout_width2 > 0) {
+      $max_width_layouts2 = config_get('afterlight_tribute_subtheme.settings', 'site_layouts2');
+      $max_width_number2 = config_get('afterlight_tribute_subtheme.settings', 'max_width_number2');
+      foreach ($max_width_layouts2 as $max_width_layout) {
+        if (!empty($max_width_layout)) {
+          if ( $max_width_layout == $current_layout ) {
+
+            switch ($max_width_number2) {
+              case "0":
+              $variables['classes'][] = 'container';
+              $variables['classes'][] = 'container-800';
+              break;
+              case "1":
+              $variables['classes'][] = 'container';
+              $variables['classes'][] = 'container-960';
+              break;
+              case "2":
+              $variables['classes'][] = 'container';
+              break;
+              case "3":
+              $variables['classes'][] = 'container';
+              $variables['classes'][] = 'container-1200';
+              break;
+              case "4":
+              $variables['classes'][] = 'container';
+              $variables['classes'][] = 'container-1440';
+              break;
+              default:
+              break;
+              }
+          }
+        }
+      }
+    }
+
+
+
+    $uses_layout_width3 = config_get('afterlight_tribute_subtheme.settings', 'max_width_element3');
+    if ($uses_layout_width3 > 0) {
+      $max_width_layouts3 = config_get('afterlight_tribute_subtheme.settings', 'site_layouts3');
+      $max_width_number3 = config_get('afterlight_tribute_subtheme.settings', 'max_width_number3');
+      foreach ($max_width_layouts3 as $max_width_layout) {
+        if (!empty($max_width_layout)) {
+          if ( $max_width_layout == $current_layout ) {
+
+            switch ($max_width_number3) {
+              case "0":
+              $variables['classes'][] = 'container';
+              $variables['classes'][] = 'container-800';
+              break;
+              case "1":
+              $variables['classes'][] = 'container';
+              $variables['classes'][] = 'container-960';
+              break;
+              case "2":
+              $variables['classes'][] = 'container';
+              break;
+              case "3":
+              $variables['classes'][] = 'container';
+              $variables['classes'][] = 'container-1200';
+              break;
+              case "4":
+              $variables['classes'][] = 'container';
+              $variables['classes'][] = 'container-1440';
+              break;
+              default:
+              break;
+              }
+          }
+        }
+      }
+    }
+
+
   }
 
 if (theme_get_setting('afterlight_tribute_subtheme_cdn') > 0)

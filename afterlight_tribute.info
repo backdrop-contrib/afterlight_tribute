@@ -2,7 +2,7 @@ name = Afterlight Tribute
 description = A stylish theme for Backdrop CMS based on https://wordpress.com/themes/afterlight
 backdrop = 1.x
 type = theme
-version = 1.x-1.3
+version = 1.x-1.4
 
 stylesheets[all][] = css/pure.min.css
 stylesheets[all][] = css/style.css
