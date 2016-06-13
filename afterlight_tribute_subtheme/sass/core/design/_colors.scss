@@ -1,7 +1,7 @@
 /*
 * Colours go in this file
 */
-@charset "UTF-8" ;
+@charset 'utf-8';
 
 body {
   background: $darkgrey;
@@ -51,8 +51,8 @@ blockquote:after {
 }
 
 table tr th {
-  background: $realblack;
   border-bottom-style: none;
+  background: $realblack;
 }
 
 td.active {
@@ -60,9 +60,9 @@ td.active {
 }
 
 #skip-link a:visited {
-  background: $black;
-  background: rgba(0, 0, 0, 0.6);
   color: $white;
+  background: $black;
+  background: rgba(0, 0, 0, .6);
 }
 
 .tabs ul.primary li.active a,
@@ -74,16 +74,16 @@ td.active {
 }
 
 .l-header .form-text {
-  border-color: $lightgrey;
-  border-color: rgba(255, 255, 255, 0.3);
   color: $realblack;
+  border-color: $lightgrey;
+  border-color: rgba(255, 255, 255, .3);
 }
 
 .l-header .form-text:hover,
 .l-header .form-text:focus,
 .l-header .form-text:active {
-  background: $white;
   color: $realblack;
+  background: $white;
 }
 
 .l-header .form-required {
@@ -92,16 +92,16 @@ td.active {
 }
 
 .unpublished .comment-text .comment-arrow {
-  border-left: 1px solid #fff4f4;
   border-right: 1px solid #fff4f4;
+  border-left: 1px solid #fff4f4;
 }
 
 header.l-header,
 .l-header ul.menu li a.active,
 .l-header ul.menu li.active-trail a,
 .header-menu a {
-  background: transparent;
   color: $white;
+  background: transparent;
 }
 
 .gn-menu-main {
@@ -121,15 +121,15 @@ header.l-header,
 }
 
 .responsive-menus-simple li a {
-  border-bottom: 0px solid !important;
+  border-bottom: 0 solid !important;
 }
 
 .block-system-main-menu,
 .l-header ul.menu li,
 .block-system-header {
-  border-color: $white;
+  border-width: 0 0 1px 0;
   border-style: solid;
-  border-width: 0px 0px 1px 0px;
+  border-color: $white;
 }
 
 .l-header .block-system-main-menu ul.menu li:hover a,
@@ -170,8 +170,8 @@ article .link-wrapper ul.links {
 }
 
 .l-triptych-wrapper {
+  background: rgba(30, 50, 10, .08);
   background-color: #f0f0f0;
-  background: rgba(30, 50, 10, 0.08);
 }
 
 .l-triptych h2 {
@@ -181,14 +181,14 @@ article .link-wrapper ul.links {
 .l-footer-columns,
 .l-footer {
   color: #c0c0c0;
-  color: rgba(255, 255, 255, 0.65);
+  color: rgba(255, 255, 255, .65);
   background-color: $black;
 }
 
 .l-footer-columns a,
 .l-footer a {
   color: #fcfcfc;
-  color: rgba(255, 255, 255, 0.8);
+  color: rgba(255, 255, 255, .8);
 }
 
 .l-footer-columns a:hover,
@@ -203,7 +203,7 @@ article .link-wrapper ul.links {
 .l-footer li a:hover,
 .l-footer li a:focus {
   background-color: #1f1f21;
-  background-color: rgba(255, 255, 255, 0.05);
+  background-color: rgba(255, 255, 255, .05);
 }
 
 .l-footer-columns li a.active {
@@ -212,31 +212,31 @@ article .link-wrapper ul.links {
 
 .l-footer-columns h2,
 .l-footer h2 {
+  border-color: rgba(255, 255, 255, .15);
   border-bottom: 1px solid $darkgrey;
-  border-color: rgba(255, 255, 255, 0.15);
 }
 
 .l-footer-columns li a,
 .l-footer li a {
+  border-color: rgba(255, 255, 255, .15);
   border-bottom: 1px solid $darkgrey;
-  border-color: rgba(255, 255, 255, 0.15);
 }
 
 .l-footer .section {
+  border-color: rgba(255, 255, 255, .15);
   border-top: 1px solid $darkgrey;
-  border-color: rgba(255, 255, 255, 0.15);
 }
 
 .l-footer .menu li a {
-  border-right: 1px solid $darkgrey;
 
   /* LTR */
-  border-color: rgba(255, 255, 255, 0.15);
+  border-color: rgba(255, 255, 255, .15);
+  border-right: 1px solid $darkgrey;
 }
 
-[dir="rtl"] .l-footer .menu li a {
-  border-left: 1px solid $darkgrey;
+[dir='rtl'] .l-footer .menu li a {
   border-right: none;
+  border-left: 1px solid $darkgrey;
 }
 
 .l-footer-wrapper tr.odd {
@@ -245,7 +245,7 @@ article .link-wrapper ul.links {
 
 .l-footer-wrapper tr.even {
   background-color: $lightgrey;
-  background-color: rgba(0, 0, 0, 0.15);
+  background-color: rgba(0, 0, 0, .15);
 }
 
 .tabs ul.primary li.active a {
@@ -255,13 +255,13 @@ article .link-wrapper ul.links {
 
 .tabs ul.primary li a {
   color: $white;
-  background-color: transparent;
   border: 1px solid $darkgrey;
+  background-color: transparent;
 }
 
 fieldset legend {
-  background: #dbdbdb;
   color: #3b3b3b;
+  background: #dbdbdb;
 }
 
 fieldset legend a {
@@ -288,8 +288,8 @@ input.form-number,
 input.form-search,
 textarea.form-textarea,
 select.form-select {
-  border: 1px solid $lightgrey;
   color: $realblack;
+  border: 1px solid $lightgrey;
 }
 
 /* Disabled form elements */
@@ -300,14 +300,14 @@ input.form-button-disabled:active,
 .form-disabled input,
 .form-disabled select,
 .form-disabled textarea {
-  background: #ededed;
-  border-color: #bbb;
   color: #717171;
+  border-color: #bbb;
+  background: #ededed;
 }
 
 .form-disabled .grippie {
-  background-color: #ededed;
   border-color: $lightgrey;
+  background-color: #ededed;
 }
 
 .form-disabled label {
@@ -320,9 +320,9 @@ input.form-button-disabled:active,
 }
 
 .js .dropbutton-widget a:hover {
-  background-color: #f8f8f8;
-  border-color: #b8b8b8;
   color: $black;
+  border-color: #b8b8b8;
+  background-color: #f8f8f8;
 }
 
 .custom-menu-wrapper {
@@ -335,7 +335,7 @@ input.form-button-disabled:active,
 }
 
 .custom-menu-screen {
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, .5);
 }
 
 .custom-menu-bottom {
@@ -345,25 +345,25 @@ input.form-button-disabled:active,
 
 tr.odd {
   background: #e4e4e4;
-  background: rgba(0, 0, 0, 0.105);
+  background: rgba(0, 0, 0, .105);
 }
 
 tr,
 tr.even {
   background: #efefef;
-  background: rgba(0, 0, 0, 0.063);
+  background: rgba(0, 0, 0, .063);
 }
 
 .view-mode-teaser.sticky {
-  background: #f9f9f9;
-  background: rgba(0, 0, 0, 0.024);
   border: 1px solid #d3d7d9;
+  background: #f9f9f9;
+  background: rgba(0, 0, 0, .024);
 }
 
 .l-sidebar tr.even,
 .l-sidebar tr.odd {
-  background: none;
   border-bottom: 1px solid #d6d6d6;
+  background: none;
 }
 
 .tabs ul.secondary li a.active {
@@ -371,13 +371,13 @@ tr.even {
 }
 
 fieldset {
-  background: $white;
   border: 1px solid $lightgrey;
+  background: $white;
 }
 
 div.admin-panel {
-  background: #fbfbfb;
   border: 1px solid $lightgrey;
+  background: #fbfbfb;
 }
 
 .basic-cart-grid {
@@ -387,6 +387,12 @@ div.admin-panel {
 #webform-configure-form,
 #webform-configure-form a {
   color: $realblack;
+}
+
+.l-wrapper.juiced-main,
+.l-content.juiced-main {
+  z-index: 1;
+  background-color: transparent;
 }
 
 @media only screen and (max-width: 768px) {
@@ -400,7 +406,7 @@ div.admin-panel {
   }
 
   .block-system-main-menu ul.menu.responsive-menus-simple li {
-    background: #333 !important;
     padding-bottom: 10px !important;
+    background: #333 !important;
   }
 }

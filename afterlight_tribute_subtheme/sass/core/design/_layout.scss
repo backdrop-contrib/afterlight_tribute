@@ -2,7 +2,7 @@
  * All layout theming should go in this file
  * general html page elements and non-forms/buttons/footer/header
  */
-@charset "UTF-8" ;
+@charset "utf-8";
 
 /* ------------------ Table Styles ------------------ */
 *,
@@ -123,8 +123,6 @@ ul.tips {
 }
 
 /* ------------------ Layout ------------------ */
-
-
 body.admin-bar .layout {
   padding-top: 30px;
   margin-top: -30px;
@@ -143,9 +141,13 @@ body.admin-bar .layout {
 /* ----------------- Top ----------------- */
 .l-top {
   margin-top: 20px;
+  clear: both;
 }
 
 /* ----------------- Content ------------------ */
+.l-middle {
+  margin-top: 30px;
+}
 
 main h2 {
   margin-bottom: 2px;
@@ -445,9 +447,10 @@ article .link-wrapper ul.links {
 }
 
 /* --------------- System Tabs  --------------- */
-.tabs {
+nav.tabs {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   margin-bottom: 20px;
+  padding-left: 17px;
 }
 
 .tabs ul.primary {
@@ -562,7 +565,6 @@ ul.action-links li a {
 .l-top .breadcrumb {
   padding-left: 20px;
 }
-
 
 .breadcrumb {
   font-size: 0.929em;
@@ -691,5 +693,35 @@ div.admin-panel .description {
   .layout--two-column .l-content,
   .layout--two-column .l-sidebar {
     padding: 0 5px;
+  }
+}
+
+@media screen and (max-width: 37.5625em) {
+  .admin-bar .layout--juiced-up-full-screen-bottom.layout {
+    margin-top: 30px !important;
+  }
+}
+
+@media (min-width: 75em) {
+  .container.container-800 {
+    max-width: 50rem;
+  }
+}
+
+@media (min-width: 75em) {
+  .container.container-960 {
+    max-width: 60rem;
+  }
+}
+
+@media (min-width: 75em) {
+  .container.container-1200 {
+    max-width: 75rem;
+  }
+}
+
+@media (min-width: 75em) {
+  .container.container-1440 {
+    max-width: 90rem;
   }
 }

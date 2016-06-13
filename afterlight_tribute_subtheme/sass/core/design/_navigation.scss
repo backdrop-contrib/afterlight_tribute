@@ -1,7 +1,7 @@
 /**
  * footer/header/main menu/navigation go in this file
  */
-@charset "UTF-8" ;
+@charset "utf-8";
 
 /* ------------------ Header ------------------ */
 #skip-link {
@@ -32,7 +32,6 @@
 }
 
 header.l-header {
-
   width: 100%;
   z-index: 998;
   top: 0;
@@ -54,6 +53,7 @@ header.l-header {
 
 .block-system-header .logo {
   float: left;
+  max-height: 100px;
 
   /* LTR */
   padding: 15px 15px 0px 10px;
@@ -345,6 +345,14 @@ body:not(.front) .block-system-main-menu {
     top: 32px;
   }
 
+  html.admin-bar .layout--juiced-up-full-screen-left header.l-header {
+    top: 0px;
+  }
+
+  html.admin-bar .layout--juiced-up-full-screen-right header.l-header {
+    top: 0px;
+  }
+
   .l-header ul.menu li a {
     padding-right: 30px;
   }
@@ -523,4 +531,11 @@ body:not(.front) .block-system-main-menu {
   padding-left: 0;
   padding-right: 12px;
   border-left: none;
+}
+
+@media screen and (max-width: 37.5625em) {
+  .l-header {
+    display: flex;
+    order: -2;
+  }
 }

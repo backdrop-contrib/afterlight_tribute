@@ -11,10 +11,6 @@ if (isset($form_id)) {
    return;
   }
 
-$form['disclaimer00'] = array(
-  '#markup' => '<p><strong>' . t('These settings for the parent theme do NOT extend into the subtheme.') . '</strong></p>',
-);
-
 $form['use_max_width'] = array(
     '#type'          => 'checkbox',
     '#title'         => t('<b>Check to use the admin settings below </b> to control the theme max-width. <b>Uncheck</b> to write CSS to control the theme max-width.'),
@@ -49,7 +45,7 @@ foreach ($default_layout_items as $default_layout_item) {
     );
 
   $form['maxwidth1']["max_width_element1"] = array(
-        '#title' => t('For this page area:'),
+                '#title' => t('For this page area.  For this to work correctly on -page content- option, you must enable it on a layout of the B4 Full Radix or Zurb 6 Toolkit contrib layouts or similar. '),
         '#type' => 'select',
         '#options' => array("full page", "page content"),
         '#default_value' => config_get('afterlight_tribute.settings', 'max_width_element1')
@@ -85,7 +81,7 @@ foreach ($default_layout_items as $default_layout_item) {
     );
 
   $form['maxwidth2']["max_width_element2"] = array(
-        '#title' => t('For this page area:'),
+                '#title' => t('For this page area.  For this to work correctly on -page content- option, you must enable it on a layout of the B4 Full Radix or Zurb 6 Toolkit contrib layouts or similar. '),
         '#type' => 'select',
         '#options' => array("full page", "page content"),
         '#default_value' => config_get('afterlight_tribute.settings', 'max_width_element2')
@@ -121,7 +117,7 @@ foreach ($default_layout_items as $default_layout_item) {
     );
 
   $form['maxwidth3']["max_width_element3"] = array(
-        '#title' => t('For this page area:'),
+        '#title' => t('For this page area.  For this to work correctly on -page content- option, you must enable it on a layout of the B4 Full Radix or Zurb 6 Toolkit contrib layouts or similar. '),
         '#type' => 'select',
         '#options' => array("full page", "page content"),
         '#default_value' => config_get('afterlight_tribute.settings', 'max_width_element3')
@@ -132,46 +128,6 @@ foreach ($default_layout_items as $default_layout_item) {
         '#type' => 'select',
         '#options' => array("800px", "960px", "Bootstrap container default", "1200px", "1440px"),
         '#default_value' => config_get('afterlight_tribute.settings', 'max_width_number3')
-    );
-
-$form['afterlight_tribute_cdn'] = array(
-    '#type'          => 'checkbox',
-    '#title'         => t('<b>Use Cloudflare CDN</b> instead of this website to serve the base CSS file.'),
-    '#default_value' => theme_get_setting('afterlight_tribute_cdn', 'afterlight_tribute'),
-  );
-
-$form['afterlight_tribute_dynamic_menu'] = array(
-      '#type' => 'checkbox',
-      '#title' => t('Use dynamic site main menu.  Uncheck to use a fixed main menu.'),
-      '#default_value' => theme_get_setting('afterlight_tribute_dynamic_menu', 'afterlight_tribute'),
-    );
-
-$form['disclaimer'] = array(
-  '#markup' => '<p>' . t('You may choose to include these Javascript files into your page to help enable these certain components.  WARNING: some of the components may rely on multiple scripts, and you are responsible for adding the theme template functions to utilize these functionalities.  If you do not need these functionalities for this website, you may leave each unchecked.') . '</p>',
-);
-
-$form['afterlight_tribute_script1'] = array(
-      '#type' => 'checkbox',
-      '#title' => t('Load script modernizr.js'),
-      '#default_value' => theme_get_setting('afterlight_tribute_script1', 'afterlight_tribute'),
-    );
-
-$form['afterlight_tribute_script2'] = array(
-      '#type' => 'checkbox',
-      '#title' => t('Load script jquery-validate.js'),
-      '#default_value' => theme_get_setting('afterlight_tribute_script2', 'afterlight_tribute'),
-    );
-
-$form['afterlight_tribute_script3'] = array(
-      '#type' => 'checkbox',
-      '#title' => t('Load script fastclick.js'),
-      '#default_value' => theme_get_setting('afterlight_tribute_script3', 'afterlight_tribute'),
-    );
-
-$form['afterlight_tribute_script4'] = array(
-      '#type' => 'checkbox',
-      '#title' => t('Load script hammer.js'),
-      '#default_value' => theme_get_setting('afterlight_tribute_script4', 'afterlight_tribute'),
     );
 
 // backgrounds
@@ -185,64 +141,64 @@ $form['afterlight_tribute_backgrounds']["disclaimer"] = array(
   '#markup' => '<p>' . t('An image style such as [mywebsite.com/]files/styles/[large or custom]/[path to image] or one of these services may be helpful here: imgix.com, imagefly.io, cloudinary.com, imageresizer.io or aws.amazon.com/s3.') . '</p>',
 );
 
-$form['afterlight_tribute_backgrounds']['afterlight_tribute_body_main_background'] = array(
+$form['afterlight_tribute_backgrounds']['body_main_background'] = array(
       '#type' => 'textarea',
       '#title' => t('Enter the URL to your desired background image for the main page area in a layout.'),
-      '#default_value' => theme_get_setting('afterlight_tribute_body_main_background', 'afterlight_tribute'),
+      '#default_value' => theme_get_setting('body_main_background', 'afterlight_tribute'),
     );
 
-$form['afterlight_tribute_backgrounds']['afterlight_tribute_body_main_background_retina'] = array(
+$form['afterlight_tribute_backgrounds']['body_main_background_retina'] = array(
       '#type' => 'textarea',
       '#title' => t('Enter the URL to your desired background image for high resolution screens for the main page area in a layout.'),
-      '#default_value' => theme_get_setting('afterlight_tribute_body_main_background_retina', 'afterlight_tribute'),
+      '#default_value' => theme_get_setting('body_main_background_retina', 'afterlight_tribute'),
     );
 
-$form['afterlight_tribute_backgrounds']['afterlight_tribute_body_main_background_blurred'] = array(
+$form['afterlight_tribute_backgrounds']['body_main_background_blurred'] = array(
       '#type' => 'checkbox',
       '#title' => t('Blur this background'),
-      '#default_value' => theme_get_setting('afterlight_tribute_body_main_background_blurred', 'afterlight_tribute'),
+      '#default_value' => theme_get_setting('body_main_background_blurred', 'afterlight_tribute'),
     );
 
 
 
 
 //l-calltoaction area
-$form['afterlight_tribute_backgrounds']['afterlight_tribute_footer_main_background'] = array(
+$form['afterlight_tribute_backgrounds']['footer_main_background'] = array(
       '#type' => 'textarea',
       '#title' => t('Enter the URL to your desired background image for the call to action area in a layout.'),
-      '#default_value' => theme_get_setting('afterlight_tribute_footer_main_background', 'afterlight_tribute'),
+      '#default_value' => theme_get_setting('footer_main_background', 'afterlight_tribute'),
     );
 
-$form['afterlight_tribute_backgrounds']['afterlight_tribute_footer_main_background_retina'] = array(
+$form['afterlight_tribute_backgrounds']['footer_main_background_retina'] = array(
       '#type' => 'textarea',
       '#title' => t('Enter the URL to your desired background image for high resolution screens for the call to action area in a layout.'),
-      '#default_value' => theme_get_setting('afterlight_tribute_footer_main_background_retina', 'afterlight_tribute'),
+      '#default_value' => theme_get_setting('footer_main_background_retina', 'afterlight_tribute'),
     );
 
-$form['afterlight_tribute_backgrounds']['afterlight_tribute_footer_main_background_blurred'] = array(
+$form['afterlight_tribute_backgrounds']['footer_main_background_blurred'] = array(
       '#type' => 'checkbox',
       '#title' => t('Blur this background'),
-      '#default_value' => theme_get_setting('afterlight_tribute_footer_main_background_blurred', 'afterlight_tribute'),
+      '#default_value' => theme_get_setting('footer_main_background_blurred', 'afterlight_tribute'),
     );
 
 
 //juiced-main area
-$form['afterlight_tribute_backgrounds']['afterlight_tribute_juiced_main_background'] = array(
+$form['afterlight_tribute_backgrounds']['juiced_main_background'] = array(
       '#type' => 'textarea',
       '#title' => t('Enter the URL to your desired background image for the main page area when you are using a Juiced layout'),
-      '#default_value' => theme_get_setting('afterlight_tribute_juiced_main_background', 'afterlight_tribute'),
+      '#default_value' => theme_get_setting('juiced_main_background', 'afterlight_tribute'),
     );
 
-$form['afterlight_tribute_backgrounds']['afterlight_tribute_juiced_main_background_retina'] = array(
+$form['afterlight_tribute_backgrounds']['juiced_main_background_retina'] = array(
       '#type' => 'textarea',
       '#title' => t('Enter the URL to your desired background image for high resolution screens for the main page area when you are using a Juiced layout'),
-      '#default_value' => theme_get_setting('afterlight_tribute_juiced_main_background_retina', 'afterlight_tribute'),
+      '#default_value' => theme_get_setting('juiced_main_background_retina', 'afterlight_tribute'),
     );
 
-$form['afterlight_tribute_backgrounds']['afterlight_tribute_juiced_main_background_blurred'] = array(
+$form['afterlight_tribute_backgrounds']['juiced_main_background_blurred'] = array(
       '#type' => 'checkbox',
       '#title' => t('Blur this background'),
-      '#default_value' => theme_get_setting('afterlight_tribute_juiced_main_background_blurred', 'afterlight_tribute'),
+      '#default_value' => theme_get_setting('juiced_main_background_blurred', 'afterlight_tribute'),
     );
 
 
@@ -251,22 +207,22 @@ $form['afterlight_tribute_backgrounds']['afterlight_tribute_juiced_main_backgrou
 
 
 //statement 1
-$form['afterlight_tribute_backgrounds']['afterlight_tribute_statement1_background'] = array(
+$form['afterlight_tribute_backgrounds']['statement1_background'] = array(
       '#type' => 'textarea',
       '#title' => t('Enter the URL to your desired background image for the big statement 1 area in a layout.'),
-      '#default_value' => theme_get_setting('afterlight_tribute_statement1_background', 'afterlight_tribute'),
+      '#default_value' => theme_get_setting('statement1_background', 'afterlight_tribute'),
     );
 
-$form['afterlight_tribute_backgrounds']['afterlight_tribute_statement1_background_retina'] = array(
+$form['afterlight_tribute_backgrounds']['statement1_background_retina'] = array(
       '#type' => 'textarea',
       '#title' => t('Enter the URL to your desired background image for high resolution screens for the big statement 1 area in a layout.'),
-      '#default_value' => theme_get_setting('afterlight_tribute_statement1_background_retina', 'afterlight_tribute'),
+      '#default_value' => theme_get_setting('statement1_background_retina', 'afterlight_tribute'),
     );
 
-$form['afterlight_tribute_backgrounds']['afterlight_tribute_statement1_background_blurred'] = array(
+$form['afterlight_tribute_backgrounds']['statement1_background_blurred'] = array(
       '#type' => 'checkbox',
       '#title' => t('Blur this background'),
-      '#default_value' => theme_get_setting('afterlight_tribute_statement1_background_blurred', 'afterlight_tribute'),
+      '#default_value' => theme_get_setting('statement1_background_blurred', 'afterlight_tribute'),
     );
 
 
@@ -275,22 +231,22 @@ $form['afterlight_tribute_backgrounds']['afterlight_tribute_statement1_backgroun
 
 
 //statement 2
-$form['afterlight_tribute_backgrounds']['afterlight_tribute_statement2_background'] = array(
+$form['afterlight_tribute_backgrounds']['statement2_background'] = array(
       '#type' => 'textarea',
       '#title' => t('Enter the URL to your desired background image for the big statement 2 area in a layout.'),
-      '#default_value' => theme_get_setting('afterlight_tribute_statement2_background', 'afterlight_tribute'),
+      '#default_value' => theme_get_setting('statement2_background', 'afterlight_tribute'),
     );
 
-$form['afterlight_tribute_backgrounds']['afterlight_tribute_statement2_background_retina'] = array(
+$form['afterlight_tribute_backgrounds']['statement2_background_retina'] = array(
       '#type' => 'textarea',
       '#title' => t('Enter the URL to your desired background image for high resolution screens for the big statement 2 area in a layout.'),
-      '#default_value' => theme_get_setting('afterlight_tribute_statement2_background_retina', 'afterlight_tribute'),
+      '#default_value' => theme_get_setting('statement2_background_retina', 'afterlight_tribute'),
     );
 
-$form['afterlight_tribute_backgrounds']['afterlight_tribute_statement2_background_blurred'] = array(
+$form['afterlight_tribute_backgrounds']['statement2_background_blurred'] = array(
       '#type' => 'checkbox',
       '#title' => t('Blur this background'),
-      '#default_value' => theme_get_setting('afterlight_tribute_statement2_background_blurred', 'afterlight_tribute'),
+      '#default_value' => theme_get_setting('statement2_background_blurred', 'afterlight_tribute'),
     );
 
 
@@ -298,27 +254,27 @@ $form['afterlight_tribute_backgrounds']['afterlight_tribute_statement2_backgroun
 
 
 //statement 3
-$form['afterlight_tribute_backgrounds']['afterlight_tribute_statement3_background'] = array(
+$form['afterlight_tribute_backgrounds']['statement3_background'] = array(
       '#type' => 'textarea',
       '#title' => t('Enter the URL to your desired background image for the big statement 3 area in a layout.'),
-      '#default_value' => theme_get_setting('afterlight_tribute_statement3_background', 'afterlight_tribute'),
+      '#default_value' => theme_get_setting('statement3_background', 'afterlight_tribute'),
     );
 
-$form['afterlight_tribute_backgrounds']['afterlight_tribute_statement3_background_retina'] = array(
+$form['afterlight_tribute_backgrounds']['statement3_background_retina'] = array(
       '#type' => 'textarea',
       '#title' => t('Enter the URL to your desired background image for high resolution screens for the big statement 3 area in a layout.'),
-      '#default_value' => theme_get_setting('afterlight_tribute_statement3_background_retina', 'afterlight_tribute'),
+      '#default_value' => theme_get_setting('statement3_background_retina', 'afterlight_tribute'),
     );
 
-$form['afterlight_tribute_backgrounds']['afterlight_tribute_statement3_background_blurred'] = array(
+$form['afterlight_tribute_backgrounds']['statement3_background_blurred'] = array(
       '#type' => 'checkbox',
       '#title' => t('Blur this background'),
-      '#default_value' => theme_get_setting('afterlight_tribute_statement3_background_blurred', 'afterlight_tribute'),
+      '#default_value' => theme_get_setting('statement3_background_blurred', 'afterlight_tribute'),
     );
 
 
 $form['css_helpers'] = array(
-  '#markup' => '<p>' . t('Looking for CSS theming help?  You can use these CSS class selectors from layouts in your theme: <br /> l-header <br /> l-wrapper <br /> l-top <br /> l-content <br /> l-sidebar1 <br /> l-sidebar2 <br /> l-halfs <br /> l-half1 <br /> l-half2 <br /> l-thirds <br /> l-third1 <br /> l-third2 <br /> l-third3 <br /> l-quarters <br /> l-quarter1 <br /> l-quarter2 <br /> l-quarter3 <br /> l-quarter4 <br /> l-statement1 <br /> l-statement2 <br /> l-statement3 <br /> l-secondary1 <br /> l-secondary2 <br /> l-bottom <br /> l-calltoaction <br /> l-footer <br />') . '</p>',
+  '#markup' => '<p>' . t('Looking for CSS theming help? Looking at <a href="http://dev-backdropthemes.pantheonsite.io/docs14" target="blank">the documentation here.</a>') . '</p>',
 );
 
 $form['recommended'] = array(
